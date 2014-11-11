@@ -1,8 +1,8 @@
-colorFondo = #ffff
-colorHeader = #1E5773
+colorFondo = #181A1D
+colorHeader = #4B542C
 colorLetraHeader = #eaeaea
 colorLetra  = #788352
-color2 = #826865
+color2 = #433634
 color3 = #252C37	
 
 a
@@ -42,11 +42,11 @@ header
 	background colorHeader
 	color colorLetraHeader
 	Margin 0 0 0 0em
-	Padding 0 0 2em
+	Padding 0
 	display inline-block
-	border-radius 0
+	border-radius 0em 0em 0.5em 0.5em
 	width 100%
-	height auto
+	height 3em
 	vertical-align: middle
 	.header1
 		Padding 0
@@ -63,7 +63,6 @@ header
 			display inline-block
 		img
 			height 100%
-			height 4em
 			
 	.header3
 	.header2
@@ -74,26 +73,27 @@ header
 		width  auto
 		input
 			color black
+		
+		
+		
 nav
-	background-color: rgba(113, 113, 118, 0.8);
-	border-radius 0.1em
-	box-shadow 0 0 5px 1px #969696
-	margin 1.5em 0
-	opacity 1
-	padding 0 0 0 0.3em
-	transition box-shadow 0.3s
+	background color3
+	border-radius 0.75em
+	margin 0.5em
+	padding 0.3em 0em  0.3em 0.3em
+	width 97%
 	ul	
-		text-align right
+		text-align center
 		list-style none
 		margin 0 
 		padding 0px
 
 		li
 			background color2
-			border-radius 0.2em
-			margin 0
+			border-radius 0.5em
+			margin 0.1em 0.3em
 			padding 0.2em 0.8em
-			border 0
+			border 1px solid #CCCCCC
 			display inline-block
 			vertical-align: top
 			&:hover
@@ -143,30 +143,10 @@ section
 			&:hover
 				background #826865
 				border 1px solid #009fff
-#intUsuario
-	
-	width 20%
-	padding 0
-	border 2px solid
-	border-radius 0.5em
-	article
-		border 2px solid
-		border-radius 0
-		margin 0.5em
-#espacio
-	padding 0.5em
-	width 70%
-	
-#intUsuario
-#espacio
-	display inline-block
-	
+				
 
-	margin 0.5em
-	
-	
 
-@media screen and (max-width: 759px) {
+@media (max-width: 759px) {
 	
 	#menu{
 		display none
