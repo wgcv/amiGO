@@ -1,14 +1,21 @@
 
+var mostrado
 function reponsitive(){
+mostrado = false;
 
 $("#ocultarMenu").click(function(){
-$("#menuM").hide();
+$("#menu").hide();
 $("nav").show();
 });
 $("#mostrarMenu").click(function(){
-$("#menuM").show();
-$
+if(mostrado==false){
+$("#menu").show();
+mostrado=true;
+}else
+{
+$("#menu").hide();
+mostrado=false;
 
-$("nav").hide();
+}
 });
 }

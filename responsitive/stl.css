@@ -29,8 +29,11 @@ footer {
   color: #fff;
   text-align: center;
   width: 100%;
-  position: fixed;
-  bottom: 0px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2.5em;
+  margin: 2em 0 0 0;
 }
 header {
   background: #1e5773;
@@ -74,6 +77,10 @@ header .header3 input,
 header .header2 input {
   color: #000;
 }
+html {
+  position: relative;
+  min-height: 100%;
+}
 nav {
   background-color: rgba(113,113,118,0.8);
   border-radius: 0.1em;
@@ -83,7 +90,6 @@ nav {
   padding: 0 0 0 0.3em;
   transition: box-shadow 0.3s;
   box-shadow: 0 0 5px 1px #969696;
-  transition: box-shadow 0.3s, border 0.3s;
 }
 nav ul {
   text-align: right;
@@ -99,15 +105,17 @@ nav ul li {
   border: 0;
   display: inline-block;
   vertical-align: top;
+  transition: all 1s ease;
 }
 nav ul li:hover {
   background: #826865;
   border: 1px solid #009fff;
+  transition: all 0s;
 }
 nav input {
   border: solid 2px #707070;
 }
-input:focus {
+nav input:focus {
   border: solid 2px #707070;
   box-shadow: 0 0 5px 1px #969696;
 }
@@ -121,8 +129,6 @@ section {
 }
 #menuM {
   display: none;
-  float: top;
-  left: 0;
   background: #252c37;
   border-radius: 0.75em;
   margin: 0.5em;
@@ -169,18 +175,30 @@ section {
 @media screen and (max-width: 759px) {
   #menu {
     display: none;
+    text-align: center;
+    margin: 2em;
   }
-  #menuM {
-    display: none;
+  #menu li {
+    display: block;
+    width: 30%;
+    text-align: center;
+    border-radius: 0.3em;
+    margin: 0.3em 32%;
   }
   #mostrarMenu {
     display: block;
+    border: 2px solid #fff;
+    font-size: 2em;
+    margin: 0 0 -0.25em;
   }
   #busqueda {
     display: none;
   }
   nav {
-    display: inline-block;
+    display: block;
     width: auto;
+    height: initial;
+    text-align: center;
+    padding: 0 0 0.5em;
   }
 }
