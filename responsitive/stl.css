@@ -149,14 +149,15 @@ section {
   border: 1px solid #009fff;
 }
 #intUsuario {
-  width: 20%;
+  width: 23%;
   padding: 0;
-  border: 2px solid;
+  border: 0;
 }
 #intUsuario article {
   border: 2px solid;
-  border-radius: 0;
-  margin: 0.5em;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: 0.5em 0;
 }
 #espacio {
   padding: 0.5em;
@@ -165,7 +166,7 @@ section {
 #intUsuario,
 #espacio {
   display: inline-block;
-  margin: 0.5em;
+  margin: 0.5em 0.5em 2.5em 0.5em;
 }
 figcaption {
   margin: 0;
@@ -234,5 +235,21 @@ figcaption {
     margin: 0;
     display: inline-block;
     text-align: center;
+  }
+  #espacio,
+  intUsuario {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  #intUsuario {
+    display: block;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #espacio {
+    width: 95%;
   }
 }
