@@ -4,12 +4,12 @@
 	<meta charset="utf-8" />
 	<title>{{titulo}}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="stl.css">
-
+	<link href="css/jquery.bxslider.css" rel="stylesheet" />
 
 	<script type="text/javascript" src="scripts/jquery.js"></script>
-
+	<script src="scripts/jquery.bxslider.min.js"></script>
 	<script type="text/javascript" src="scripts/respon.js"></script>
 
 </head>
@@ -31,13 +31,13 @@
 		</form>	
 </span>
     <nav>
-<div id="mostrarMenu"> &#9776;</div>
+<div id="mostrarMenu"><br></div>
 	<ul id="menu">
 		<li><a href="">Inicio</a></li>
 		<li><a href="">Nosotros</a></li>
 		<li><a href="">Servicios</a></li>
 		<li><a href="">Unidades</a></li>
-		<li><a href="">Srv al cliente</a></li>
+		<li><a href="">Servicio al cliente</a></li>
 		<li><a href="">Contactos</a></li>
 	</ul>
 
@@ -46,7 +46,12 @@
 </header>
 
 <figcaption>
+<ul class="bxslider">
+  <li><img src="images/slide1.png" /></li>
+  <li><img src="images/slide2.png" /></li>
+  <li><img src="images/slide3.png" /></li>
 
+</ul>
 </figcaption>
 
 <section id="espacio">
@@ -84,7 +89,11 @@ LOGOS SOCIALES
 <br />Power by: WGCV
 </footer>
 <script type="text/javascript">
+$(document).ready(function(){
 
-reponsitive();</script>
+ slider = $('.bxslider').bxSlider({"auto":true,"pause":6000,"autoHover":true,"randomStart":true});
+ reponsitive();
+});
+</script>
 </body>
 </html>

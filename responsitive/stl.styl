@@ -92,7 +92,7 @@ html {
 }
 nav
 	background-color: rgba(0, 0, 0, 0.4)
-	margin 1em 0 1em
+	margin 0.5em 0 0.5em
 	opacity 1
 	padding 0 0 0 0.3em
 	font-size 20px
@@ -123,8 +123,7 @@ nav
 		
 	input:focus
 		border: solid 2px #707070;
-	#mostrarMenu
-		display none
+
 section
 	margin 0.5em
 	padding 0.25em
@@ -175,7 +174,29 @@ section
 	display inline-block
 	margin 0.5em
 	
-	
+figcaption{
+    margin:0;
+  padding: 0;
+}
+
+#mostrarMenu {
+
+	display: none
+  position: relative;
+  padding-left: 1.25em;
+}
+#mostrarMenu:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 1em;
+  height: 0.15em;
+  background: white;
+  box-shadow: 
+    0 0.25em 0 0 white,
+    0 0.5em 0 0 white;
+}
 
 @media screen and (max-width: 759px) {
 
