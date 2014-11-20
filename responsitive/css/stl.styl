@@ -44,7 +44,7 @@ footer
 
 
 header
-	background url(logos/header_fondo.png)
+	background url(../logos/header_fondo.png)
 	background-size: 12px 12px
 	background-repeat: repeat
 	color colorLetraHeader
@@ -69,16 +69,45 @@ header
 			margin 0
 			width 70%
 			display inline-block
+			transition: all 0.8s ease-out
+			&:hover
+				transform: rotate(360deg);
+				width 100%
+	.header3
+		padding 0.3em 0.7em
+		background-color: rgba(0, 0, 0, 0.4)
+		border solid 1px #000
+		border-radius 0.5em
+		&:hover
+			box-shadow 1.5px 1.5px 3px #009fff
+	.header2
+
+		padding 0.1em 0.7em
+		
+		text-align right
+		input
+			padding 0.3em 0.7em
+			background rgba(0, 0, 0, 0.4)
+			border solid 1px #000
+			border-radius 0.5em
+			&:hover
+				color: #009fff;
+				box-shadow 1.5px 1.5px 3px #009fff
+		input[type="text"] 
+			width 10em
+		
+	
 			
 	.header3
 	.header2
 		display inline-block
 		vertical-align: bottom
 		float right
-		margin 1% 2%
-		width  auto
-		input
-			color black
+		margin 1% 1em
+
+	
+
+			
 	.header4
 		width 100%
 		height 15px
@@ -175,10 +204,14 @@ section
 	display inline-block
 	margin 0.5em 0.5em 2.5em 0.5em
 
-figcaption{
-    margin:0;
-  padding: 0;
-}
+figcaption
+	margin 0
+	padding: 0
+	ul
+		li
+			img
+				padding 0 0 2em
+	
 
 #mostrarMenu {
 
@@ -199,24 +232,35 @@ figcaption{
     0 0.5em 0 0 white;
 }
 
+
+
 @media screen and (max-width: 759px) {
 
 
 	
 	#menu{
 		display none		
-		text-align center
+		text-align left
+		margin: 0 0 2.5em
+	}
+	#menu ul{
+		display none		
+		text-align left
+		margin: 0 0 50px
 	}
 	#menu li{
 		display block
-		width 100%
-		text-align center
-	
+		width auto
+		text-align left
+		
 		border-radius 0.3em
-		padding 0.5em 0 0.5em 0 
-		margin  0
+		padding 0.5em
+		margin  0.5em 
+		background #826865
+		border 1px solid #009fff
+		background-color rgba(113,120,120,0.8)
 	}
-
+	
 	
 		#busqueda{
 		display none
@@ -233,7 +277,7 @@ figcaption{
 
 }
 header .header1 img {
-  width: 50%;
+  width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto
@@ -256,17 +300,18 @@ header .header4 {
 }
   nav {
 	display: block;
-	padding 0
-	text-align: center
-	width: 50%;
+	padding 0 0 0.1em
+	text-align: left
+	width: 100%;
 	margin-left: auto;
   	margin-right: auto
     }
 nav #mostrarMenu {
 	font-size 2em
-	margin 0
+	margin 0 1em
 	display inline-block
-	text-align: center
+	text-align: left
+	
 	}
 #espacio,intUsuario{
 	display block
