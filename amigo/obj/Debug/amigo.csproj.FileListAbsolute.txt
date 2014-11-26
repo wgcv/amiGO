@@ -1,0 +1,4 @@
+c:\users\gustavo\documents\visual studio 2010\Projects\amigo\amigo\bin\amigo.dll
+c:\users\gustavo\documents\visual studio 2010\Projects\amigo\amigo\bin\amigo.pdb
+c:\users\gustavo\documents\visual studio 2010\Projects\amigo\amigo\obj\Debug\amigo.dll
+c:\users\gustavo\documents\visual studio 2010\Projects\amigo\amigo\obj\Debug\amigo.pdb

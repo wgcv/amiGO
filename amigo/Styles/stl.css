@@ -1,5 +1,5 @@
 a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   cursor: auto;
 }
@@ -19,7 +19,7 @@ section {
 }
 body {
   background: #d3d3d3;
-  color: #788352;
+  color: #2E2E2E;
   font-size: 18px;
   height: 100%;
 }
@@ -120,6 +120,11 @@ nav {
   padding: 0 0 0 0.3em;
   font-size: 20px;
 }
+header a {
+  color: #fff;
+  text-decoration: none;
+  cursor: auto;
+}
 nav ul {
   text-align: left;
   list-style: none;
@@ -178,7 +183,7 @@ section {
   width: 23%;
   padding: 1em 1em 0 1em;
   border: 0;
-  background:#fff ;
+  background:#ebebeb ;
   border-radius: 0.7em;
   text-align: center;
   border: 2px solid #b2b2b2;
@@ -213,6 +218,7 @@ section {
   height: 100%;
   margin: 0;
   }
+  
 #espacio #novedades article{
    vertical-align: text-top;
   text-align: center;
@@ -221,6 +227,18 @@ section {
   width: 23%;
   background:#ebebeb ;
   height: 300px;
+  border: 2px solid #b2b2b2;
+  border-radius: 0.5em;
+  padding: 1em 1em;
+  margin: 0.4em;
+}
+#espacio #holder{
+   vertical-align: text-top;
+  text-align: left;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  background:#fff ;
   border: 2px solid #b2b2b2;
   border-radius: 0.5em;
   padding: 1em 1em;
@@ -286,7 +304,7 @@ figcaption ul li img {
     border: 1px solid #009fff;
     background-color: rgba(113,120,120,0.8);
   }
-  #busqueda {
+    header .header2 {
     display: none;
   }
   header .header1 {
@@ -325,27 +343,47 @@ figcaption ul li img {
   #espacio,
   intUsuario {
     display: block;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
     text-align: center;
   }
   #intUsuario {
     display: block;
-    width: 95%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
+    float: none;
   }
   #espacio {
-    width: 90%;
+    width: 96%;
+    padding 0;
+    text-align: center;
+        float: none;
+        
   }
   #espacio #novedades article{
   display: block;
   overflow: hidden;
   width: 80%;
   height: 300px;
-
+  
   border-radius: 0.5em;
   padding: 1em 2em;
   margin: 0.5em 0 ;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+ #espacio #holder
+ {
+
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 0.5em;
+  padding: 0.5em;
+    margin-left: 0;
+    margin-right: auto;
+  text-align: center;
 }
 }
