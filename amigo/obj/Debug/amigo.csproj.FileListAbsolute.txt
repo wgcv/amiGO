@@ -2,3 +2,7 @@ c:\users\gustavo\documents\visual studio 2010\Projects\amigo\amigo\bin\amigo.dll
 c:\users\gustavo\documents\visual studio 2010\Projects\amigo\amigo\bin\amigo.pdb
 c:\users\gustavo\documents\visual studio 2010\Projects\amigo\amigo\obj\Debug\amigo.dll
 c:\users\gustavo\documents\visual studio 2010\Projects\amigo\amigo\obj\Debug\amigo.pdb
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\amigo.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\amigo.pdb
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\obj\Debug\amigo.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\obj\Debug\amigo.pdb

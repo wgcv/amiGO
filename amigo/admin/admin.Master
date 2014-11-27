@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.Master.cs" Inherits="amigo.admins" %>
+
+<!DOCTYPE html>
+<html lang="es">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Taxi amiGO</title>
+    <link rel="stylesheet" type="text/css" href="/Styles/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/Styles/stl.css">
+	<link rel="stylesheet" href="/Styles/jquery.bxslider.css"/>
+    
+	<script type="text/javascript" src="/Scripts/jquery.js"></script>
+	<script type="text/javascript" src="/Scripts/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="/Scripts/respon.js"></script>
+
+    
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+
+    <header>
+        <span class="header1">
+            <a href="/">
+                <img src="/logos/logo.png" alt="Novedad" class="logo" >
+            </a>
+        </span>
+
+        <span class="header3">
+		                    <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                         <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">login</a> 
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Cerrar sesión" LogoutPageUrl="~/"/>
+                    </LoggedInTemplate>
+                </asp:LoginView>
+        </span>
+        <span class="header2">
+            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox> 
+            <asp:Button ID="Button1" runat="server" Text="Button" onclick="Button1_Click"></asp:Button>
+        </span>
+        <nav>
+            <div id="mostrarMenu"><br></div>
+	        <ul id="menu">
+		        <li><a href="">Maestra1</a></li>
+		        <li><a href="">Maestra2</a></li>
+		        <li><a href="">Maestra3</a></li>
+		        <li><a href="">Maestra4</a></li>
+		        <li><a href="">Maestra5</a></li>
+		        <li><a href="">Contactos</a></li>
+	        </ul>
+
+        </nav>
+        <div class="header4"> 
+        </div>
+    </header>
+
+
+    <figcaption>
+    </figcaption>
+    <section>
+<article id="holder_admin">
+       <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </article>
+            </section>
+
+
+    <footer>
+    	<a href="#"> <img src="/logos/twitter.png" class="logo" /></a>
+	    <a href="#"> <img src="/logos/instagram.png" class="logo" /></a>
+	    <a href="#"> <img src="/logos/facebook.png" class="logo" /></a>
+        <br />Power by: WGCV
+    </footer>
+
+    </form>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            reponsitive();
+        });
+</script>
+</body>
+</html>

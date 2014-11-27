@@ -152,7 +152,7 @@ nav input:focus {
 section {
   margin: 0.5em;
   padding: 0.25em;
-  width: 70%;
+  width: 95%;
 }
 #menuM {
   display: none;
@@ -227,6 +227,18 @@ section {
   width: 23%;
   background:#ebebeb ;
   height: 300px;
+  border: 2px solid #b2b2b2;
+  border-radius: 0.5em;
+  padding: 1em 1em;
+  margin: 0.4em;
+}
+section #holder_admin{
+   vertical-align: text-top;
+  text-align: left;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  background:#fff ;
   border: 2px solid #b2b2b2;
   border-radius: 0.5em;
   padding: 1em 1em;

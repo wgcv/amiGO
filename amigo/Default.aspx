@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Página principal" Language="C#" MasterPageFile="~/page.Master" AutoEventWireup="true"
+﻿<%@ Page Title="Página principal" Language="C#" MasterPageFile="~/ladding.Master" AutoEventWireup="true"
     CodeBehind="Default.aspx.cs" Inherits="amigo._Default" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
