@@ -20,6 +20,8 @@
                  ValidationGroup="LoginUserValidationGroup"/>
             <div class="accountInfo">
                 <fieldset class="login">
+                <asp:Panel ID="login" runat="server" DefaultButton="LoginButton">
+
                     <legend>Información de cuenta</legend>
                     <p>
                         <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">Nombre de usuario:</asp:Label>
@@ -39,10 +41,10 @@
                         <asp:CheckBox ID="RememberMe" runat="server"/>
                         <asp:Label ID="RememberMeLabel" runat="server" AssociatedControlID="RememberMe" CssClass="inline">Mantenerme conectado</asp:Label>
                     </p>
-                </fieldset>
-                <p class="submitButton">
                     <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Iniciar sesión" ValidationGroup="LoginUserValidationGroup"/>
-                </p>
+                </asp:Panel>    
+                </fieldset>
+
             </div>
         </LayoutTemplate>
     </asp:Login>
