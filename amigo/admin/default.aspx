@@ -3,5 +3,5 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <p>
-        Bienvenidos al administrador de Amigo</p>
+    Bienvenidos al administrador de Amigo</p>
 </asp:Content>

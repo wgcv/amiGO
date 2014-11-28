@@ -51,12 +51,12 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Account\ChangePassword.aspx" />
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="admin\default.aspx" />
+    <Content Include="contactanos.aspx" />
     <Content Include="images\slide1.jpg" />
     <Content Include="images\slide2.jpg" />
     <Content Include="images\slide3.jpg" />
@@ -66,9 +66,12 @@
     <Content Include="logos\instagram.png" />
     <Content Include="logos\logo.png" />
     <Content Include="logos\twitter.png" />
+    <Content Include="nosotros.aspx" />
     <Content Include="Scripts\jquery.bxslider.min.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\respon.js" />
+    <Content Include="servicios.aspx" />
+    <Content Include="solicitar.aspx" />
     <Content Include="Styles\jquery.bxslider.css" />
     <Content Include="Styles\normalize.css" />
     <Content Include="Styles\Site.css" />
@@ -78,6 +81,8 @@
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Styles\stl.css" />
+    <Content Include="svrcliente.aspx" />
+    <Content Include="unidades.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -87,13 +92,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Account\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -136,6 +134,13 @@
     <Compile Include="admin\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="contactanos.aspx.cs">
+      <DependentUpon>contactanos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contactanos.aspx.designer.cs">
+      <DependentUpon>contactanos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -145,6 +150,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="nosotros.aspx.cs">
+      <DependentUpon>nosotros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nosotros.aspx.designer.cs">
+      <DependentUpon>nosotros.aspx</DependentUpon>
     </Compile>
     <Compile Include="page.Master.cs">
       <DependentUpon>page.Master</DependentUpon>
@@ -160,6 +172,34 @@
     </Compile>
     <Compile Include="ladding.Master.designer.cs">
       <DependentUpon>ladding.Master</DependentUpon>
+    </Compile>
+    <Compile Include="servicios.aspx.cs">
+      <DependentUpon>servicios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="servicios.aspx.designer.cs">
+      <DependentUpon>servicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="solicitar.aspx.cs">
+      <DependentUpon>solicitar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="solicitar.aspx.designer.cs">
+      <DependentUpon>solicitar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="svrcliente.aspx.cs">
+      <DependentUpon>svrcliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="svrcliente.aspx.designer.cs">
+      <DependentUpon>svrcliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="unidades.aspx.cs">
+      <DependentUpon>unidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="unidades.aspx.designer.cs">
+      <DependentUpon>unidades.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
