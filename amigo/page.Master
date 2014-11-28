@@ -42,7 +42,8 @@
         </span>
         <span class="header2">
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox> 
-            <asp:Button ID="Button1" runat="server" Text="Button" onclick="Button1_Click"></asp:Button>
+            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" 
+        onclick="Button1_Click"></asp:Button>
         </span>
         <nav>
             <div id="mostrarMenu"><br></div>
