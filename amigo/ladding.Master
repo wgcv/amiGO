@@ -74,24 +74,39 @@
         <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
         <section id="novedades">
             	<article>
-                    <img src="#" alt="Novedad" class="novedades">
+                    <img  src="/logos/security.png" alt="Seguridad" class="novedades">
                     <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel accumsan massa. Mauris erat ex, mollis at nisi et, finibus cursus quam. Aliquam et ultricies nulla. Morbi eget leo tempor, commodo libero ut, pretium felis. Quisque tempus gravida ligula, consectetur imperdiet nunc elementum a. Donec hendrerit ultricies mollis. Suspendisse rhoncus nibh sit amet tellus feugiat semper. Quisque molestie efficitur viverra. Duis ultricies, neque non viverra molestie, erat massa aliquam felis, id blandit augue ligula eget erat. Quisque ullamcorper tellus maximus, pulvinar tellus pellentesque, imperdiet magna.
+                  Seguridad
+                    </p>
+                    <p>
+                   Autos registrados, modernos y cómodos vehículos ejecutivos equipados con todo lo indispensable para brindar seguridad y confort.
                     </p>
                 </article>
                <article>
-                    <img src="#" alt="Novedad" class="novedades">
+                    <img src="/logos/tec.png" alt="Tecnología" class="novedades">
+                     <p>
+                  Tecnología
+                    </p>
+                      <p>
+                   Con tan solo escribir unas pocas y unos cuantos clics, nuestros clientes pueden reservar su unidad con tiempo 
+                    </p>
                 </article>
                 <article>
-                    <img src="#" alt="Novedad" class="novedades">
+                    <img src="/logos/confort.png" alt="Novedad" class="novedades">
+                      <p>
+                 Comodidad
+                    </p>
+                    <p>
+                  Unidades modernas, con todos los servicios para brindarle un excelente viaje a su destino.
+                    </p>
                 </article>
             </section>
             <section id="unidades">
 	            <article>
-		            <h2>Nuestras Unidades</h2>
-		            <img src="#" alt="Unidad" class="unidades">
-	            	<img src="#" alt="Unidad" class="unidades">
-		            <img src="#" alt="Unidad" class="unidades">
+		            <P style="COLOR: #000000; BACKGROUND-COLOR: #e9b800">Nuestras nuevas unidades</P>
+		            <img img src="/images/carro1.png" alt="Unidad" class="unidades">
+	            	<img src="/images/carro2.png" alt="Unidad" class="unidades">
+		            <img src="/images/carro3.png" alt="Unidad" class="unidades">
                 </article>
             </section>
         </section>
@@ -110,7 +125,7 @@
     	<a href="#"> <img src="/logos/twitter.png" class="logo" /></a>
 	    <a href="#"> <img src="/logos/instagram.png" class="logo" /></a>
 	    <a href="#"> <img src="/logos/facebook.png" class="logo" /></a>
-        <br />Power by: WGCV
+        <br />Power by: NVTN
     </footer>
 <script type="text/javascript">
         $(document).ready(function () {
