@@ -10,10 +10,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     
     <asp:Image ID="Image1" runat="server" ImageUrl="/images/contact.jpg"
-     Width="881px" />
+     />
      <table style="width:100%;">
         <tr>
-            <td class="style1">
+            <td>
                 &nbsp;</td>
             <td>
                 &nbsp;</td>
@@ -39,7 +39,7 @@
                 &nbsp;</td>
         </tr>
         <tr>
-            <td class="style1">
+            <td>
                 <asp:Label ID="Label2" runat="server" Font-Bold="True" Text="Su nombre"></asp:Label>
 &nbsp;&nbsp;
                 <asp:RequiredFieldValidator ID="rfvnombre" runat="server" 
@@ -53,7 +53,7 @@
         </tr>
         <tr>
             <td class="style1">
-                <asp:TextBox ID="txtnombre" runat="server" MaxLength="30" Width="407px"></asp:TextBox>
+                <asp:TextBox ID="txtnombre" runat="server" MaxLength="30" Width="50%"></asp:TextBox>
             </td>
             <td>
                 &nbsp;</td>
@@ -84,7 +84,7 @@
         </tr>
         <tr>
             <td class="style1">
-                <asp:TextBox ID="txtemail" runat="server" MaxLength="30" Width="406px"></asp:TextBox>
+                <asp:TextBox ID="txtemail" runat="server" MaxLength="30" Width="50%"></asp:TextBox>
             </td>
             <td>
                 &nbsp;</td>
@@ -114,7 +114,7 @@
         </tr>
         <tr>
             <td class="style1">
-                <asp:TextBox ID="txtasunto" runat="server" MaxLength="15" Width="406px"></asp:TextBox>
+                <asp:TextBox ID="txtasunto" runat="server" MaxLength="15" Width="50%"></asp:TextBox>
             </td>
             <td>
                 &nbsp;</td>
@@ -144,8 +144,8 @@
         </tr>
         <tr>
             <td class="style1">
-                <asp:TextBox ID="txtmensaje" runat="server" Height="119px" MaxLength="500" 
-                    Width="833px"></asp:TextBox>
+                <asp:TextBox ID="txtmensaje" runat="server" Height="150px" MaxLength="500" 
+                    Width="100%"></asp:TextBox>
             </td>
             <td>
                 &nbsp;</td>
@@ -162,11 +162,10 @@
                 &nbsp;</td>
         </tr>
         <tr>
-            <td class="style1">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <td class="style1"><center>
                 &nbsp;<asp:Button ID="btnenviarmensaje" runat="server" Height="32px" 
-                    Text="Enviar mensaje" Width="217px" />
-            </td>
+                    Text="Enviar mensaje" Width="217px" /></center>
+            &nbsp;</td>
             <td>
                 &nbsp;</td>
             <td>

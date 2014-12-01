@@ -42,8 +42,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<asp:Image ID="Image1" runat="server" ImageUrl="~/images/city.png" 
-        Width="881px" />
+<asp:Image ID="Image1" runat="server" ImageUrl="~/images/city.png" />
     <br />
     <table style="width:100%;">
     <tr>

@@ -36,6 +36,9 @@ footer {
   margin: 2em 0 0 0;
   padding: .5em 0 0 0;
 }
+img {
+  width: 100%;
+}
 header {
   background: url("../logos/header_fondo.png");
   background-size: 12px 12px;
@@ -233,7 +236,15 @@ section {
   height: 100%;
   margin: 0;
   }
-  
+#novedades img
+{
+    width:45%;
+    }
+    #unidades img
+{
+    margin: 2em 0;
+    width:31%;
+    }
 #espacio #novedades article{
    vertical-align: text-top;
   text-align: center;
@@ -294,20 +305,25 @@ figcaption ul li img {
   box-shadow: 0 0.25em 0 0 #fff, 0 0.5em 0 0 #fff;
 }
 #unidades {
-  width: 90%;
+  width: 100%;
   text-align: center;
+  display: inline-block;
 }
 #unidades article{
   text-align: left;
   display: inline-block;
   overflow: hidden;
-  width: 80%;
+  width: 100%;
 
   
   border-radius: 0.5em;
   padding: 1em 2em;
 
 }
+footer img
+{
+    width: auto;
+    }
 
 @media screen and (max-width: 759px) {
   #menu {
@@ -426,4 +442,8 @@ figcaption ul li img {
     margin-right: auto;
   text-align: center;
 }
+#novedades img
+{
+    width:25%;
+    }
 }

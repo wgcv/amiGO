@@ -17,8 +17,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/services.jpg" 
-        Width="881px" />
+    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/services.jpg" />
     <br />
     <table style="width:100%;">
         <tr>
