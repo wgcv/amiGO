@@ -17,6 +17,21 @@ section {
   padding: 0.25em;
   vertical-align: top;
 }
+section .unidad
+{
+    display:block;
+    
+    }
+article .unida
+{
+    display:inline-block;
+    
+    }   
+.unida img
+{
+    width: 30%;
+    
+    }
 body {
   background: #d3d3d3;
   color: #2E2E2E;
@@ -324,6 +339,11 @@ footer img
 {
     width: auto;
     }
+h1
+{
+    margin: 1.5em 0 0;
+    text-align: center;
+    }
 
 @media screen and (max-width: 759px) {
   #menu {
@@ -445,5 +465,11 @@ footer img
 #novedades img
 {
     width:25%;
+    }
+    .unida img
+{
+    margin: 2em;
+    width: 60%;
+    
     }
 }
