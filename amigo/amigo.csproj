@@ -57,6 +57,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="admin\default.aspx" />
     <Content Include="contactanos.aspx" />
+    <Content Include="enviado.aspx" />
     <Content Include="images\slide1.jpg" />
     <Content Include="images\slide2.jpg" />
     <Content Include="images\slide3.jpg" />
@@ -140,6 +141,13 @@
     </Compile>
     <Compile Include="contactanos.aspx.designer.cs">
       <DependentUpon>contactanos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="enviado.aspx.cs">
+      <DependentUpon>enviado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="enviado.aspx.designer.cs">
+      <DependentUpon>enviado.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

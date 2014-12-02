@@ -49,13 +49,13 @@ namespace amigo {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvnombre;
         
         /// <summary>
-        /// Control txtnombre.
+        /// Control txtNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtnombre;
+        protected global::System.Web.UI.WebControls.TextBox txtNombre;
         
         /// <summary>
         /// Control Label3.
@@ -76,13 +76,13 @@ namespace amigo {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvemail;
         
         /// <summary>
-        /// Control txtemail.
+        /// Control txtEmail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtemail;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
         /// Control Label4.
@@ -103,13 +103,13 @@ namespace amigo {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvasunto;
         
         /// <summary>
-        /// Control txtasunto.
+        /// Control txtAsunto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtasunto;
+        protected global::System.Web.UI.WebControls.TextBox txtAsunto;
         
         /// <summary>
         /// Control Label5.
@@ -130,13 +130,13 @@ namespace amigo {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvmensaje;
         
         /// <summary>
-        /// Control txtmensaje.
+        /// Control txtMensaje.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtmensaje;
+        protected global::System.Web.UI.WebControls.TextBox txtMensaje;
         
         /// <summary>
         /// Control ValidationSummary1.

@@ -53,7 +53,7 @@
         </tr>
         <tr>
             <td class="style1">
-                <asp:TextBox ID="txtnombre" runat="server" MaxLength="30" Width="50%"></asp:TextBox>
+                <asp:TextBox ID="txtNombre" runat="server" MaxLength="30" Width="50%"></asp:TextBox>
             </td>
             <td>
                 &nbsp;</td>
@@ -84,7 +84,7 @@
         </tr>
         <tr>
             <td class="style1">
-                <asp:TextBox ID="txtemail" runat="server" MaxLength="30" Width="50%"></asp:TextBox>
+                <asp:TextBox ID="txtEmail" runat="server" MaxLength="30" Width="50%"></asp:TextBox>
             </td>
             <td>
                 &nbsp;</td>
@@ -114,7 +114,7 @@
         </tr>
         <tr>
             <td class="style1">
-                <asp:TextBox ID="txtasunto" runat="server" MaxLength="15" Width="50%"></asp:TextBox>
+                <asp:TextBox ID="txtAsunto" runat="server" MaxLength="15" Width="50%"></asp:TextBox>
             </td>
             <td>
                 &nbsp;</td>
@@ -144,8 +144,8 @@
         </tr>
         <tr>
             <td class="style1">
-                <asp:TextBox ID="txtmensaje" runat="server" Height="150px" MaxLength="500" 
-                    Width="100%"></asp:TextBox>
+                <asp:TextBox ID="txtMensaje" runat="server" Height="150px" MaxLength="500" 
+                    Width="100%" TextMode="MultiLine"></asp:TextBox>
             </td>
             <td>
                 &nbsp;</td>
@@ -164,7 +164,7 @@
         <tr>
             <td class="style1"><center>
                 &nbsp;<asp:Button ID="btnenviarmensaje" runat="server" Height="32px" 
-                    Text="Enviar mensaje" Width="217px" /></center>
+                    Text="Enviar mensaje" Width="217px" onclick="btnenviarmensaje_Click" /></center>
             &nbsp;</td>
             <td>
                 &nbsp;</td>
