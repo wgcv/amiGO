@@ -1,5 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ladding.Master.cs" Inherits="amigo.SiteMaster" %>
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head runat="server">
@@ -19,10 +20,23 @@
 
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            margin-bottom: 0px;
+        }
+    </style>
 </head>
 <body>
     <form runat="server">
-
+    <div id="fb-root"></div>
+<script>    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    } (document, 'script', 'facebook-jssdk'));</script>
     <header>
         <span class="header1">
             <a href="/">
@@ -114,14 +128,25 @@
         </section>
     <section id="intUsuario">
         <article>
-	        COMENTARIOS NUESTRO CLIENTES
+	        <asp:Label ID="lblcomentarios" runat="server" Text=""></asp:Label>
+            <br />
+            <asp:Label ID="lblCusuario" runat="server" Text=""></asp:Label>
 	    </article>
+       
         <article>
-	        AÑADIR COMENTARIOS
+
+    <asp:TextBox ID="txtComentario" runat="server" TextMode="MultiLine"></asp:TextBox>
+	  <asp:Label ID="lblMensajeComentario" runat="server"></asp:Label>
+      <asp:Button ID="btnComentario" runat="server" Text="Enviar Comentario" 
+        onclick="btnComentario_Click"></asp:Button>
+
 	    </article>
+       
         <article>
-	        REDES SOCIALES
-	    </article>
+    
+	    
+        <div class="fb-like-box" data-href="https://www.facebook.com/pages/Amigo/885150168161893" data-width="100%" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="false"></div>
+        </article>
     </section>
     <footer>
     	<a href="#"> <img src="/logos/twitter.png" class="logo" /></a>
