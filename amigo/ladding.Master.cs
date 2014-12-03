@@ -60,5 +60,9 @@ namespace amigo
                 lblMensajeComentario.Text = "Debe estar registrado para dejar un comentario!";
             }
         }
+
+        protected void lblcomentarios_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
