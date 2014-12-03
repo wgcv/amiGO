@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script src="scripts/jquery.js"></script>
+<script src="scripts/jquery.bxslider.min.js"></script>
+<link href="css/jquery.bxslider.css" rel="stylesheet" />
+  
+</head>
+<body>
+<ul class="bxslider">
+  <li><img src="logos/twitter.png" /></li>
+  <li><img src="images/pic2.jpg" /></li>
+  <li><img src="images/pic3.jpg" /></li>
+  <li><img src="images/pic4.jpg" /></li>
+</ul>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	alert("mundo");
+ slider = $('.bxslider').bxSlider({"auto":true,"autoHover":true,"randomStart":true});
+});
+</script>
+</body>
+</html>

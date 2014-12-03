@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>{{titulo}}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/stl.css">
+	<link href="css/jquery.bxslider.css" rel="stylesheet" />
+
+	<script type="text/javascript" src="scripts/jquery.js"></script>
+	<script src="scripts/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="scripts/respon.js"></script>
+
+</head>
+<body>
+<header>
+<span class="header1">
+<a href="/">
+<img src="logos/logo.png" alt="Novedad" class="logo" >
+</a>
+</span>
+
+<span class="header3">
+		<a href="" id="login">Login</a>
+</span>
+<span class="header2">
+		<form id="busqueda">
+			<input type="text" name="busca">
+			<input type="submit" value="buscar">
+
+		</form>	
+</span>
+    <nav>
+<div id="mostrarMenu"><br></div>
+	<ul id="menu">
+		<li><a href="">Inicio</a></li>
+		<li><a href="">Nosotros</a></li>
+		<li><a href="">Servicios</a></li>
+		<li><a href="">Unidades</a></li>
+		<li><a href="">Servicio al cliente</a></li>
+		<li><a href="">Contactos</a></li>
+	</ul>
+
+</nav>
+<div class="header4"> </div>
+</header>
+
+<figcaption>
+<ul class="bxslider">
+  <li><img src="images/slide1.jpg" /></li>
+  <li><img src="images/slide2.jpg" /></li>
+  <li><img src="images/slide3.jpg" /></li>
+
+</ul>
+</figcaption>
+
+<section id="espacio">
+<section id="novedades">
+
+	<article><img src="#" alt="Novedad" class="novedades">
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel accumsan massa. Mauris erat ex, mollis at nisi et, finibus cursus quam. Aliquam et ultricies nulla. Morbi eget leo tempor, commodo libero ut, pretium felis. Quisque tempus gravida ligula, consectetur imperdiet nunc elementum a. Donec hendrerit ultricies mollis. Suspendisse rhoncus nibh sit amet tellus feugiat semper. Quisque molestie efficitur viverra. Duis ultricies, neque non viverra molestie, erat massa aliquam felis, id blandit augue ligula eget erat. Quisque ullamcorper tellus maximus, pulvinar tellus pellentesque, imperdiet magna.</p></article>
+	<article><img src="#" alt="Novedad" class="novedades"></article>
+	<article><img src="#" alt="Novedad" class="novedades"></article>
+</section>
+<div class="header4"> </div>
+<section id="unidades">
+	<article>
+	<h2>Nuestras Unidades</h2>
+	<img src="#" alt="Unidad" class="unidades">
+	<img src="#" alt="Unidad" class="unidades">
+	<img src="#" alt="Unidad" class="unidades">
+	</article>
+	</section>
+</section>
+<section id="intUsuario">
+	<article>
+	COMENTARIOS NUESTRO CLIENTES
+	</article>
+
+	<article>
+	AÑADIR COMENTARIOS
+	</article>
+
+	<article>
+	REDES SOCIALES
+	</article>
+</section>
+<footer>
+	<a href="#"> <img src="logos/twitter.png" class="logo" /></a>
+	<a href="#"> <img src="logos/twitter.png" class="logo" /></a>
+	<a href="#"> <img src="logos/twitter.png" class="logo" /></a>
+
+<br />Power by: WGCV</footer>
+<script type="text/javascript">
+$(document).ready(function(){
+
+ slider = $('.bxslider').bxSlider({"auto":true,"pause":6000,"autoHover":true,"randomStart":true});
+ reponsitive();
+});
+</script>
+</body>
+</html>
