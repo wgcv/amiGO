@@ -55,7 +55,12 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="admin\chofer.aspx" />
+    <Content Include="admin\comentarios.aspx" />
+    <Content Include="admin\contactanos.aspx" />
     <Content Include="admin\default.aspx" />
+    <Content Include="admin\servicios.aspx" />
+    <Content Include="admin\unidad.aspx" />
     <Content Include="contactanos.aspx" />
     <Content Include="enviado.aspx" />
     <Content Include="images\slide1.jpg" />
@@ -128,12 +133,42 @@
     <Compile Include="admin\admin.Master.designer.cs">
       <DependentUpon>admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="admin\chofer.aspx.cs">
+      <DependentUpon>chofer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\chofer.aspx.designer.cs">
+      <DependentUpon>chofer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\comentarios.aspx.cs">
+      <DependentUpon>comentarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\comentarios.aspx.designer.cs">
+      <DependentUpon>comentarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\contactanos.aspx.cs">
+      <DependentUpon>contactanos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\contactanos.aspx.designer.cs">
+      <DependentUpon>contactanos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\servicios.aspx.cs">
+      <DependentUpon>servicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\servicios.aspx.designer.cs">
+      <DependentUpon>servicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\unidad.aspx.cs">
+      <DependentUpon>unidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\unidad.aspx.designer.cs">
+      <DependentUpon>unidad.aspx</DependentUpon>
     </Compile>
     <Compile Include="contactanos.aspx.cs">
       <DependentUpon>contactanos.aspx</DependentUpon>
