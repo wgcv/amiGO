@@ -64,7 +64,7 @@ namespace amigo {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lblcomentarios;
+        protected global::System.Web.UI.WebControls.Label lblcomentarios;
         
         /// <summary>
         /// Control lblCusuario.
@@ -73,7 +73,7 @@ namespace amigo {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lblCusuario;
+        protected global::System.Web.UI.WebControls.Label lblCusuario;
         
         /// <summary>
         /// Control txtComentario.

@@ -22,7 +22,7 @@
 </head>
 <body>
     <form runat="server">
-        <div id="fb-root"></div>
+
     <header>
         <span class="header1">
             <a href="/">
@@ -74,36 +74,16 @@
             
  
         </section>
-     <section id="intUsuario">
-        <article id="comentarios">
-        <asp:LinkButton ID="lblcomentarios"  class="mComentarios" runat="server" 
-        onclick="lblcomentarios_Click"></asp:LinkButton>
-             <br />
-	       <asp:LinkButton ID="lblCusuario" class="mComentarios" runat="server" 
-        onclick="lblcomentarios_Click"></asp:LinkButton>
-       
-	    </article>
-       
+    <section id="intUsuario">
         <article>
-
-    <asp:TextBox ID="txtComentario" runat="server" TextMode="MultiLine" Width="80%"></asp:TextBox><br />
-
-	  <asp:Label ID="lblMensajeComentario" runat="server"></asp:Label>
-    
-    <br />
-      <asp:Button ID="btnComentario" runat="server" Text="Enviar Comentario" 
-        onclick="btnComentario_Click"></asp:Button>
-
+	        COMENTARIOS NUESTRO CLIENTES
 	    </article>
-       
         <article>
-    
-	    
-        <div class="fb-like-box" data-href="https://www.facebook.com/pages/Amigo/885150168161893" data-width="100%" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="false"></div>
-        <br />
-        <a class="twitter-timeline" href="https://twitter.com/trans_amigo" data-widget-id="539989986981195776">Tweets por el @trans_amigo.</a>
-<script>    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script>
-</article>
+	        AÑADIR COMENTARIOS
+	    </article>
+        <article>
+	        REDES SOCIALES
+	    </article>
     </section>
     <footer>
     	<a href="#"> <img src="/logos/twitter.png" class="logo" /></a>

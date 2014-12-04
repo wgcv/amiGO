@@ -187,7 +187,6 @@ section {
   padding: 0.25em;
   width: 95%;
 }
-
 #menuM {
   display: none;
   background: #252c37;
@@ -235,17 +234,13 @@ section {
   border-radius: 0.5em;
   margin: 0 0 1em;
 }
+
 #espacio {
   padding: 0;
   width: 65%;
   height: 100%;
-  text-align:center;
 
 }
-.mComentarios:hover
-{
-    color:#B18904;
-    }
 #intUsuario,
 #espacio {
   display: inline-block;
@@ -265,7 +260,6 @@ section {
     margin: 2em 0;
     width:31%;
     }
-    
 #espacio #novedades article{
    vertical-align: text-top;
   text-align: center;
@@ -291,8 +285,6 @@ section #holder_admin{
   padding: 1em 1em;
   margin: 0.4em;
 }
-
-
 #espacio #holder{
    vertical-align: text-top;
   text-align: left;
@@ -351,18 +343,6 @@ h1
 {
     margin: 1.5em 0 0;
     text-align: center;
-    }
-article#comentarios
-{
-    width: 85%;
-  border: 2px solid #b2b2b2;
-  border-radius: 0.5em;
-  padding: 0.5em;
-    }
-a#lblCusuario
-{
-    color: #696969;
-    float:right;
     }
 
 @media screen and (max-width: 759px) {
@@ -452,7 +432,7 @@ a#lblCusuario
   }
   #espacio {
     width: 96%;
-    padding: 0;
+    padding 0;
     text-align: center;
         float: none;
         
