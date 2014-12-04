@@ -135,18 +135,21 @@
     </Compile>
     <Compile Include="admin\chofer.aspx.cs">
       <DependentUpon>chofer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\chofer.aspx.designer.cs">
       <DependentUpon>chofer.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\comentarios.aspx.cs">
       <DependentUpon>comentarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\comentarios.aspx.designer.cs">
       <DependentUpon>comentarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\contactanos.aspx.cs">
       <DependentUpon>contactanos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\contactanos.aspx.designer.cs">
       <DependentUpon>contactanos.aspx</DependentUpon>
@@ -160,12 +163,14 @@
     </Compile>
     <Compile Include="admin\servicios.aspx.cs">
       <DependentUpon>servicios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\servicios.aspx.designer.cs">
       <DependentUpon>servicios.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\unidad.aspx.cs">
       <DependentUpon>unidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\unidad.aspx.designer.cs">
       <DependentUpon>unidad.aspx</DependentUpon>
