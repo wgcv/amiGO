@@ -16,10 +16,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <p>
-        <br />
-    </p>
-    <p>
+
         <asp:Label ID="lblbuscar" runat="server" Text="Buscar por: "></asp:Label>
 &nbsp;&nbsp;
         <asp:DropDownList ID="ddllist" runat="server">
@@ -188,7 +185,5 @@
                 </td>
             </tr>
         </table>
-    </p>
-    <p>
-    </p>
+  
 </asp:Content>
