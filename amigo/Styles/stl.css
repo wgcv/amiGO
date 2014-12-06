@@ -214,7 +214,7 @@ section {
 }
 #intUsuario {
   width: 23%;
-  padding: 1em 0em 0 0em;
+  padding: 1em 1em 0 1em;
   border: 0;
   background:#ebebeb ;
   border-radius: 0.7em;
@@ -228,8 +228,8 @@ section {
   vertical-align: text-top;
   display: inline-block;
   overflow: hidden;
-  width: 100%;
-  height: auto;
+  width: 80%;
+  height: 300px;
 
   border-radius: 0.5em;
   margin: 0 0 1em;

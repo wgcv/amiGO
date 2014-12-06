@@ -27,7 +27,6 @@
                     <asp:ValidationSummary ID="RegisterUserValidationSummary" runat="server" CssClass="failureNotification" 
                          ValidationGroup="RegisterUserValidationGroup"/>
                     <div class="accountInfo">
-                                    <asp:Panel ID="login" runat="server" DefaultButton="CreateUserButton">
                         <fieldset class="register">
                             <legend>Información de cuenta</legend>
                             <p>
@@ -66,7 +65,6 @@
                             <asp:Button ID="CreateUserButton" runat="server" CommandName="MoveNext" Text="Crear usuario" 
                                  ValidationGroup="RegisterUserValidationGroup"/>
                         </p>
-                        </asp:Panel>
                     </div>
                 </ContentTemplate>
                 <CustomNavigationTemplate>
