@@ -22,9 +22,7 @@
 </head>
 <body>
     <form runat="server">
-<<<<<<< HEAD
 
-=======
     <div id="fb-root"></div>
 <script>    (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -33,7 +31,7 @@
         js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.0";
         fjs.parentNode.insertBefore(js, fjs);
     } (document, 'script', 'facebook-jssdk'));</script>
->>>>>>> parent of 578e279... 'lpzxvjciohuf
+
     <header>
         <span class="header1">
             <a href="/">
@@ -125,36 +123,27 @@
         </section>
     <section id="intUsuario">
         <article>
-<<<<<<< HEAD
-	        COMENTARIOS NUESTRO CLIENTES
-=======
+
 	        <asp:Label ID="lblcomentarios" runat="server" Text=""></asp:Label>
             <br />
             <asp:Label ID="lblCusuario" runat="server" Text=""></asp:Label>
->>>>>>> parent of 578e279... 'lpzxvjciohuf
+
 	    </article>
         <article>
-<<<<<<< HEAD
-	        AÑADIR COMENTARIOS
-=======
+
 
     <asp:TextBox ID="txtComentario" runat="server" TextMode="MultiLine"></asp:TextBox>
 	  <asp:Label ID="lblMensajeComentario" runat="server"></asp:Label>
       <asp:Button ID="btnComentario" runat="server" Text="Enviar Comentario" 
         onclick="btnComentario_Click"></asp:Button>
 
->>>>>>> parent of 578e279... 'lpzxvjciohuf
+
 	    </article>
         <article>
-<<<<<<< HEAD
-	        REDES SOCIALES
-	    </article>
-=======
-    
+
 	    
         <div class="fb-like-box" data-href="https://www.facebook.com/pages/Amigo/885150168161893" data-width="100%" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="false"></div>
         </article>
->>>>>>> parent of 578e279... 'lpzxvjciohuf
     </section>
     <footer>
     	<a href="#"> <img src="/logos/twitter.png" class="logo" /></a>

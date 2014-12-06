@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Security;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace amigo
 {
@@ -18,8 +21,7 @@ namespace amigo
         {
 
         }
-<<<<<<< HEAD
-=======
+
 
         protected void btnComentario_Click(object sender, EventArgs e)
         {
@@ -47,6 +49,6 @@ namespace amigo
                 lblMensajeComentario.Text = "Debe estar registrado para dejar un comentario!";
             }
         }
->>>>>>> parent of 578e279... 'lpzxvjciohuf
+
     }
 }
