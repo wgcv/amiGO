@@ -52,6 +52,12 @@ namespace amigo
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        protected void lblcomentarios_Click(object sender, EventArgs e)
+        {
+        }
+>>>>>>> parent of 7c44154... Revert "'lpzxvjciohuf"
 =======
         protected void lblcomentarios_Click(object sender, EventArgs e)
         {
