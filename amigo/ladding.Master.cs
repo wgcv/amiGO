@@ -14,6 +14,20 @@ namespace amigo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
+            string cadenaConexion = param.ConnectionString;
+            SqlConnection conexion = new SqlConnection(cadenaConexion);
+            string sql = "SELECT TOP 1 mensaje,nombre FROM comentarios ORDER BY NEWID()";
+            SqlCommand commando = new SqlCommand(sql, conexion);
+            conexion.Open();
+            SqlDataReader comentario = commando.ExecuteReader();
+
+            if (comentario.Read() == true)
+            {
+                lblcomentarios.Text = comentario["mensaje"].ToString();
+                lblCusuario.Text = comentario["nombre"].ToString();
+            }
+            conexion.Close();
 
         }
 
@@ -50,23 +64,10 @@ namespace amigo
             }
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
         protected void lblcomentarios_Click(object sender, EventArgs e)
         {
         }
->>>>>>> parent of 7c44154... Revert "'lpzxvjciohuf"
-=======
-        protected void lblcomentarios_Click(object sender, EventArgs e)
-        {
-        }
->>>>>>> parent of 7c44154... Revert "'lpzxvjciohuf"
-=======
-        protected void lblcomentarios_Click(object sender, EventArgs e)
-        {
-        }
->>>>>>> parent of 7c44154... Revert "'lpzxvjciohuf"
+
     }
 }
