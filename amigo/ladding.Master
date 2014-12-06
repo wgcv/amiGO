@@ -25,6 +25,7 @@
 
     <div id="fb-root"></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <script>    (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
@@ -33,6 +34,8 @@
         fjs.parentNode.insertBefore(js, fjs);
     } (document, 'script', 'facebook-jssdk'));</script>
 
+=======
+>>>>>>> parent of 7c44154... Revert "'lpzxvjciohuf"
 =======
 >>>>>>> parent of 7c44154... Revert "'lpzxvjciohuf"
     <header>
@@ -128,6 +131,7 @@
         </section>
     <section id="intUsuario">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <article>
 
 	        <asp:Label ID="lblcomentarios" runat="server" Text=""></asp:Label>
@@ -135,20 +139,32 @@
             <asp:Label ID="lblCusuario" runat="server" Text=""></asp:Label>
 
 =======
+=======
+>>>>>>> parent of 7c44154... Revert "'lpzxvjciohuf"
         <article id="comentarios">
         <asp:LinkButton ID="lblcomentarios"  class="mComentarios" runat="server" 
         onclick="lblcomentarios_Click"></asp:LinkButton>
              <br />
 	       <asp:LinkButton ID="lblCusuario" class="mComentarios" runat="server" 
         onclick="lblcomentarios_Click"></asp:LinkButton>
+<<<<<<< HEAD
+=======
+       
+	    </article>
+>>>>>>> parent of 7c44154... Revert "'lpzxvjciohuf"
        
 >>>>>>> parent of 7c44154... Revert "'lpzxvjciohuf"
 	    </article>
         <article>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     <asp:TextBox ID="txtComentario" runat="server" TextMode="MultiLine"></asp:TextBox>
+=======
+    <asp:TextBox ID="txtComentario" runat="server" TextMode="MultiLine" Width="80%"></asp:TextBox><br />
+
+>>>>>>> parent of 7c44154... Revert "'lpzxvjciohuf"
 =======
     <asp:TextBox ID="txtComentario" runat="server" TextMode="MultiLine" Width="80%"></asp:TextBox><br />
 
