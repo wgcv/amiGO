@@ -270,7 +270,7 @@ namespace amigo.admin
                 {
                     if (Session["modo"] == "M")
                     {
-                        sql = "UPDATE  chofer SET tipolicencia = '" + txttipolicencia.Text + "' , cedula = '" + txtcedula.Text + "', nombre = '" + txtnombre.Text + "', horaEntrada='" + txthoraEntrada.Text +"', horaSalida='" + txthsalida.Text+"', telefono = '" + txttelefono.Text + "'WHERE codigo=" + Session["codigo"];
+                        sql = "UPDATE  chofer SET tipolicencia = '" + txttipolicencia.Text + "' , cedula = '" + txtcedula.Text + "', nombre = '" + txtnombre.Text + "', horaEntrada='" + txthoraEntrada.Text + "', horaSalida='" + txthsalida.Text + "', telefono = '" + txttelefono.Text + "', UserId = '" + DropDownList1.SelectedValue + "'WHERE codigo=" + Session["codigo"];
 
                     }
                     else

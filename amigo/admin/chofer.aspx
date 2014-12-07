@@ -105,7 +105,7 @@
                 &nbsp;&nbsp;<asp:RegularExpressionValidator ID="revlicencia1" runat="server" 
             ControlToValidate="txtcedula" 
             ErrorMessage="Ingrese solo el tipo de licencia" ForeColor="Red" 
-            ValidationExpression="\d{10}">A</asp:RegularExpressionValidator>
+            ValidationExpression="\d{10}">*</asp:RegularExpressionValidator>
 &nbsp;<asp:RequiredFieldValidator ID="rfvcedula" runat="server" 
                         ControlToValidate="txtcedula" ErrorMessage="Ingrese la cedula" 
                         ForeColor="#CC0000">*</asp:RequiredFieldValidator>
@@ -134,7 +134,7 @@
                 <td class="style3">
                 <asp:ScriptManager ID="scl" runat="server" EnableScriptGlobalization="true"/>
                     <asp:Label ID="lblhoraEntrada" runat="server" Text="Hora entrada"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
                     <asp:TextBox ID="txthoraEntrada" runat="server" Width="89px"></asp:TextBox>
                 <cc1:MaskedEditExtender ID="txthoraEntrada_MaskedEditExtender" 
             runat="server" TargetControlID="txthoraEntrada" MaskType="Time" Mask="99:99:99">
@@ -150,7 +150,6 @@
             <tr>
                 <td class="style3">
                     <asp:Label ID="lblhsalida" runat="server" Text="Hora salida"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="txthsalida" runat="server" Width="89px"></asp:TextBox>
                 <cc1:MaskedEditExtender ID="txthsalida_MaskedEditExtender" 
               runat="server" TargetControlID="txthsalida" MaskType="Time" Mask="99:99:99">
