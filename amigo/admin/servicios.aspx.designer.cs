@@ -22,13 +22,13 @@ namespace amigo.admin {
         protected global::System.Web.UI.WebControls.Label lblbuscar;
         
         /// <summary>
-        /// ddlbucar control.
+        /// ddlbuscar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlbucar;
+        protected global::System.Web.UI.WebControls.DropDownList ddlbuscar;
         
         /// <summary>
         /// txtbuscar control.
@@ -49,13 +49,13 @@ namespace amigo.admin {
         protected global::System.Web.UI.WebControls.Button btnbuscar;
         
         /// <summary>
-        /// GridView1 control.
+        /// grvservicios control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView grvservicios;
         
         /// <summary>
         /// btnnuevo control.

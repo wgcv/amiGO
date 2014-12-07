@@ -84,7 +84,8 @@
        
 	    </article>
        
-        <article>
+       <article>
+
 
     <asp:TextBox ID="txtComentario" runat="server" TextMode="MultiLine" Width="80%"></asp:TextBox><br />
 
@@ -94,10 +95,8 @@
       <asp:Button ID="btnComentario" runat="server" Text="Enviar Comentario" 
         onclick="btnComentario_Click"></asp:Button>
 
+
 	    </article>
-       
-        <article>
-    
 	    
         <div class="fb-like-box" data-href="https://www.facebook.com/pages/Amigo/885150168161893" data-width="100%" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="false"></div>
         <br />

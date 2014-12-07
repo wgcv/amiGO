@@ -18,7 +18,7 @@
     <p style="height: 35px">
         <asp:Label ID="lblbuscar" runat="server" Text="Buscar por: "></asp:Label>
 &nbsp;&nbsp;
-        <asp:DropDownList ID="ddlbucar" runat="server">
+        <asp:DropDownList ID="ddlbuscar" runat="server">
             <asp:ListItem Value="codigo">Codigo</asp:ListItem>
             <asp:ListItem Value="servicio">Servicio</asp:ListItem>
             <asp:ListItem Value="estado">Estado</asp:ListItem>
@@ -27,7 +27,8 @@
 &nbsp;&nbsp;
         <asp:TextBox ID="txtbuscar" runat="server" Width="157px"></asp:TextBox>
 &nbsp;&nbsp;
-        <asp:Button ID="btnbuscar" runat="server" Text="Buscar" />
+        <asp:Button ID="btnbuscar" runat="server" Text="Buscar" 
+            CausesValidation="False" onclick="btnbuscar_Click" />
     </p>
     <p>
         <table style="width:100%;">
@@ -35,9 +36,12 @@
                 <td class="style1">
                     &nbsp;</td>
                 <td>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-                        Height="218px" onselectedindexchanged="GridView1_SelectedIndexChanged" 
-                        Width="878px">
+                    <asp:GridView ID="grvservicios" runat="server" AutoGenerateColumns="False" 
+                        Height="130px" 
+                        Width="878px" BackColor="White" BorderColor="#999999" BorderStyle="Solid" 
+                        BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" 
+                        onrowcommand="grvservicios_RowCommand">
+                        <AlternatingRowStyle BackColor="#CCCCCC" />
                         <Columns>
                             <asp:ButtonField CommandName="modificar" Text="Modificar" />
                             <asp:BoundField DataField="codigo" HeaderText="Codigo" />
@@ -46,6 +50,14 @@
                             <asp:BoundField DataField="estado" HeaderText="Estado" />
                             <asp:ButtonField CommandName="eliminar" Text="Eliminar" />
                         </Columns>
+                        <FooterStyle BackColor="#CCCCCC" />
+                        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                        <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                        <SortedAscendingHeaderStyle BackColor="#808080" />
+                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                        <SortedDescendingHeaderStyle BackColor="#383838" />
                     </asp:GridView>
                 </td>
             </tr>
@@ -57,9 +69,11 @@
         <tr>
             <td class="style2">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btnnuevo" runat="server" Text="Nuevo" Width="85px" />
+                    <asp:Button ID="btnnuevo" runat="server" Text="Nuevo" Width="108px" 
+                    Height="42px" CausesValidation="False" onclick="btnnuevo_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btnrefrescar" runat="server" Text="Refrescar" Width="85px" />
+                    <asp:Button ID="btnrefrescar" runat="server" Text="Refrescar" Width="108px" 
+                    Height="42px" CausesValidation="False" onclick="btnrefrescar_Click" />
                     &nbsp;</td>
         </tr>
         <tr>
@@ -71,6 +85,8 @@
                     <asp:Label ID="lblcodigo" runat="server" Text="Codigo"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="txtcodigo" runat="server" Width="89px"></asp:TextBox>
+                    <br />
+                    <br />
                 </td>
         </tr>
         <tr>
@@ -82,6 +98,8 @@
                     <asp:RequiredFieldValidator ID="rfvservicio" runat="server" 
                         ControlToValidate="txtservicio" ErrorMessage="Ingrese el servicio" 
                         ForeColor="#CC0000">*</asp:RequiredFieldValidator>
+                    <br />
+                    <br />
                 </td>
         </tr>
         <tr>
@@ -93,6 +111,8 @@
                     <asp:RequiredFieldValidator ID="rfvservicio0" runat="server" 
                         ControlToValidate="txtvalor" ErrorMessage="Ingrese el valor del servicio" 
                         ForeColor="#CC0000">*</asp:RequiredFieldValidator>
+                    <br />
+                    <br />
                 </td>
         </tr>
         <tr>
@@ -101,6 +121,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="txtestado" runat="server" Width="52px" MaxLength="1">A</asp:TextBox>
                 &nbsp;&nbsp;&nbsp;
+                    <br />
+                    <br />
             </td>
         </tr>
         <tr>
@@ -121,10 +143,12 @@
         </tr>
         <tr>
             <td class="style2">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btngrabar" runat="server" Text="Grabar" Width="85px" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                    <asp:Button ID="btngrabar" runat="server" Text="Grabar" Width="108px" 
+                    Height="42px" onclick="btngrabar_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btnlimpiar" runat="server" Text="Limpiar" Width="85px" />
+                    <asp:Button ID="btnlimpiar" runat="server" Text="Limpiar" Width="108px" 
+                    Height="42px" CausesValidation="False" onclick="btnlimpiar_Click" />
                 &nbsp;</td>
         </tr>
     </table>

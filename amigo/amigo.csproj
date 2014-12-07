@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.20820.16598, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -262,6 +266,7 @@
   <ItemGroup>
     <Content Include="page.Master" />
     <Content Include="admin\admin.Master" />
+    <Content Include="admin\web.config" />
     <None Include="logos\Thumbs.db" />
     <None Include="Styles\stl.styl" />
   </ItemGroup>

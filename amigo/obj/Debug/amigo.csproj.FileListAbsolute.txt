@@ -16,3 +16,20 @@ C:\Users\Nadia Terranova\Documents\GitHub\amiGO\amigo\bin\amigo.pdb
 C:\Users\Nadia Terranova\Documents\GitHub\amiGO\amigo\obj\Debug\amigo.csprojResolveAssemblyReference.cache
 C:\Users\Nadia Terranova\Documents\GitHub\amiGO\amigo\obj\Debug\amigo.dll
 C:\Users\Nadia Terranova\Documents\GitHub\amiGO\amigo\obj\Debug\amigo.pdb
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\AjaxControlToolkit.pdb
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\ar\AjaxControlToolkit.resources.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\cs\AjaxControlToolkit.resources.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\de\AjaxControlToolkit.resources.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\es\AjaxControlToolkit.resources.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\fr\AjaxControlToolkit.resources.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\he\AjaxControlToolkit.resources.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\hi\AjaxControlToolkit.resources.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\it\AjaxControlToolkit.resources.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\ja\AjaxControlToolkit.resources.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\ko\AjaxControlToolkit.resources.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\nl\AjaxControlToolkit.resources.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\pt\AjaxControlToolkit.resources.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\ru\AjaxControlToolkit.resources.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\tr-TR\AjaxControlToolkit.resources.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\zh-CHS\AjaxControlToolkit.resources.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\bin\zh-CHT\AjaxControlToolkit.resources.dll

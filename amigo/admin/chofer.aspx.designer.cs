@@ -49,13 +49,13 @@ namespace amigo.admin {
         protected global::System.Web.UI.WebControls.Button btnbuscar;
         
         /// <summary>
-        /// Control GridView1.
+        /// Control grvchofer.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView grvchofer;
         
         /// <summary>
         /// Control btnnuevo.
@@ -112,6 +112,15 @@ namespace amigo.admin {
         protected global::System.Web.UI.WebControls.TextBox txttipolicencia;
         
         /// <summary>
+        /// Control revlicencia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revlicencia;
+        
+        /// <summary>
         /// Control rfvtipolicencia.
         /// </summary>
         /// <remarks>
@@ -121,13 +130,13 @@ namespace amigo.admin {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtipolicencia;
         
         /// <summary>
-        /// Control lbltipolicencia0.
+        /// Control lblcedula.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbltipolicencia0;
+        protected global::System.Web.UI.WebControls.Label lblcedula;
         
         /// <summary>
         /// Control txtcedula.
@@ -137,6 +146,15 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtcedula;
+        
+        /// <summary>
+        /// Control revlicencia1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revlicencia1;
         
         /// <summary>
         /// Control rfvcedula.
@@ -166,6 +184,15 @@ namespace amigo.admin {
         protected global::System.Web.UI.WebControls.TextBox txtnombre;
         
         /// <summary>
+        /// Control revlicencia0.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revlicencia0;
+        
+        /// <summary>
         /// Control rfvnombre.
         /// </summary>
         /// <remarks>
@@ -175,22 +202,40 @@ namespace amigo.admin {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvnombre;
         
         /// <summary>
-        /// Control lblnombre0.
+        /// Control scl.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblnombre0;
+        protected global::System.Web.UI.ScriptManager scl;
         
         /// <summary>
-        /// Control txthentrada.
+        /// Control lblhoraEntrada.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txthentrada;
+        protected global::System.Web.UI.WebControls.Label lblhoraEntrada;
+        
+        /// <summary>
+        /// Control txthoraEntrada.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txthoraEntrada;
+        
+        /// <summary>
+        /// Control txthoraEntrada_MaskedEditExtender.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::AjaxControlToolkit.MaskedEditExtender txthoraEntrada_MaskedEditExtender;
         
         /// <summary>
         /// Control rfvhentrada.
@@ -220,6 +265,15 @@ namespace amigo.admin {
         protected global::System.Web.UI.WebControls.TextBox txthsalida;
         
         /// <summary>
+        /// Control txthsalida_MaskedEditExtender.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::AjaxControlToolkit.MaskedEditExtender txthsalida_MaskedEditExtender;
+        
+        /// <summary>
         /// Control rfvhsalida.
         /// </summary>
         /// <remarks>
@@ -247,13 +301,22 @@ namespace amigo.admin {
         protected global::System.Web.UI.WebControls.TextBox txttelefono;
         
         /// <summary>
-        /// Control rfvhsalida0.
+        /// Control revlicencia2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvhsalida0;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revlicencia2;
+        
+        /// <summary>
+        /// Control rfvtelefono.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtelefono;
         
         /// <summary>
         /// Control lblestado.
@@ -274,31 +337,40 @@ namespace amigo.admin {
         protected global::System.Web.UI.WebControls.TextBox txtestado;
         
         /// <summary>
-        /// Control lblusuario.
+        /// Control revlicencia3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblusuario;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revlicencia3;
         
         /// <summary>
-        /// Control txtusuarioid.
+        /// Control Label1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtusuarioid;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Control rfvusuario.
+        /// Control DropDownList1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvusuario;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        
+        /// <summary>
+        /// Control SqlDataSource1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
         /// Control ValidationSummary1.
