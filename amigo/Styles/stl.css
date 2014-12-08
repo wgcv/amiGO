@@ -114,8 +114,9 @@ header .header2 input[type="text"] {
 
   background: #d3d3d3;
 }
-header .header3,
-header .header2 {
+header .header3
+/*,header .header2 */
+{
   display: inline-block;
   vertical-align: bottom;
   float: right;
