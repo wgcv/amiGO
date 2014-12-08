@@ -97,11 +97,14 @@
     <Content Include="images\van1.png" />
     <Content Include="images\van2.png" />
     <Content Include="images\van3.png" />
+    <Content Include="logos\confort.png" />
     <Content Include="logos\facebook.png" />
     <Content Include="logos\header_fondo.png" />
     <Content Include="logos\heder_line.png" />
     <Content Include="logos\instagram.png" />
     <Content Include="logos\logo.png" />
+    <Content Include="logos\security.png" />
+    <Content Include="logos\tec.png" />
     <Content Include="logos\twitter.png" />
     <Content Include="nosotros.aspx" />
     <Content Include="Scripts\jquery.bxslider.min.js" />
