@@ -43,7 +43,7 @@
         <asp:TextBox ID="txtbuscar" runat="server" Width="157px"></asp:TextBox>
 &nbsp;&nbsp;
         <asp:Button ID="btnbuscar" runat="server" Text="Buscar" 
-            onclick="btnbuscar_Click1" CausesValidation="false"/>
+            onclick="btnbuscar_Click" CausesValidation="false"/>
     </p>
     <p>
         <table style="width:100%;">
@@ -58,7 +58,8 @@
                     <asp:GridView ID="grvunidad" runat="server" AutoGenerateColumns="False" 
                         Height="130px" 
                         Width="1065px" BackColor="White" BorderColor="#999999" BorderStyle="Solid" 
-                        BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical">
+                        BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" 
+                        onrowcommand="grvunidad_RowCommand">
                         <AlternatingRowStyle BackColor="#CCCCCC" />
                         <Columns>
                             <asp:ButtonField CommandName="modificar" Text="Modificar" />
@@ -102,7 +103,7 @@
                         Height="42px"  CausesValidation="false" onclick="btnnuevo_Click"/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btnrefrescar" runat="server" Text="Refrescar" Width="108px" 
-                        Height="42px"  CausesValidation="false" />
+                        Height="42px"  CausesValidation="false" onclick="btnrefrescar_Click" />
                     <br />
                 </td>
                 <td>
@@ -193,17 +194,27 @@
                 <td class="style5">
                     <asp:Label ID="lblzona" runat="server" Text="Zona"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="txtzona" runat="server" Width="146px"></asp:TextBox>
-                &nbsp;&nbsp;
-                    <asp:RequiredFieldValidator ID="rfvzona" runat="server" 
-                        ControlToValidate="txtzona" ErrorMessage="Ingrese la zona de la unidad" 
-                        ForeColor="#CC0000">*</asp:RequiredFieldValidator>
+                    &nbsp;<asp:DropDownList ID="ddlZona" runat="server" 
+                        DataSourceID="SqlDataSource3" DataTextField="zona" DataValueField="codigo">
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" 
+                        ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" 
+                        SelectCommand="SELECT [codigo], [zona] FROM [zona]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                        ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" 
+                        SelectCommand="SELECT [codigo] FROM [zona]"></asp:SqlDataSource>
+                    &nbsp;
                     <br />
                     <br />
                     <br />
                     <asp:Label ID="lblchofer" runat="server" Text="Chofer"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="txtchofer" runat="server" Width="146px"></asp:TextBox>
+                    <asp:DropDownList ID="ddlChofe" runat="server" DataSourceID="SqlDataSource2" 
+                        DataTextField="nombre" DataValueField="codigo">
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                        ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" 
+                        SelectCommand="SELECT [codigo], [nombre] FROM [chofer]"></asp:SqlDataSource>
                 </td>
                 <td class="style6">
                     &nbsp;</td>
@@ -212,12 +223,14 @@
                 <td class="style5">
                     <asp:Label ID="lbltipounidad" runat="server" Text="Tipo Unidad"></asp:Label>
 &nbsp;&nbsp;
-                    <asp:TextBox ID="txttipounidad" runat="server" Width="146px"></asp:TextBox>
-                &nbsp;&nbsp;
-                    <asp:RequiredFieldValidator ID="rfvtipounidad" runat="server" 
-                        ControlToValidate="txttipounidad" ErrorMessage="Ingrese el tipo de la unidad" 
-                        ForeColor="#CC0000">*</asp:RequiredFieldValidator>
-                </td>
+                    &nbsp;&nbsp;<asp:DropDownList ID="ddlTipoUnidad" runat="server" 
+                        DataSourceID="SqlDataSource4" DataTextField="tipo" DataValueField="codigo">
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" 
+                        ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" 
+                        SelectCommand="SELECT [codigo], [tipo] FROM [tipoUnidades]">
+                    </asp:SqlDataSource>
+&nbsp;</td>
                 <td class="style6">
                     &nbsp;</td>
             </tr>
@@ -248,10 +261,10 @@
                 <td class="style5">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btngrabar" runat="server" Text="Grabar" Width="108px" 
-                        Height="42px" />
+                        Height="42px" onclick="btngrabar_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btnlimpiar" runat="server" Text="Limpiar" Width="108px" 
-                        Height="42px" />
+                        Height="42px" onclick="btnlimpiar_Click" />
                 </td>
                 <td class="style6">
                     &nbsp;</td>

@@ -238,22 +238,31 @@ namespace amigo.admin {
         protected global::System.Web.UI.WebControls.Label lblzona;
         
         /// <summary>
-        /// Control txtzona.
+        /// Control ddlZona.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtzona;
+        protected global::System.Web.UI.WebControls.DropDownList ddlZona;
         
         /// <summary>
-        /// Control rfvzona.
+        /// Control SqlDataSource3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvzona;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
+        
+        /// <summary>
+        /// Control SqlDataSource1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
         /// Control lblchofer.
@@ -265,13 +274,22 @@ namespace amigo.admin {
         protected global::System.Web.UI.WebControls.Label lblchofer;
         
         /// <summary>
-        /// Control txtchofer.
+        /// Control ddlChofe.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtchofer;
+        protected global::System.Web.UI.WebControls.DropDownList ddlChofe;
+        
+        /// <summary>
+        /// Control SqlDataSource2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
         
         /// <summary>
         /// Control lbltipounidad.
@@ -283,22 +301,22 @@ namespace amigo.admin {
         protected global::System.Web.UI.WebControls.Label lbltipounidad;
         
         /// <summary>
-        /// Control txttipounidad.
+        /// Control ddlTipoUnidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txttipounidad;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTipoUnidad;
         
         /// <summary>
-        /// Control rfvtipounidad.
+        /// Control SqlDataSource4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtipounidad;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource4;
         
         /// <summary>
         /// Control lblestado.

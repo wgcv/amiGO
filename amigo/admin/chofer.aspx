@@ -85,11 +85,7 @@
                     <asp:Label ID="lbltipolicencia" runat="server" Text="Tipo de Licencia"></asp:Label>
 &nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="txttipolicencia" runat="server" Width="98px" MaxLength="1"></asp:TextBox>
-                &nbsp;<asp:RegularExpressionValidator ID="revlicencia" runat="server" 
-            ControlToValidate="txttipolicencia" 
-            ErrorMessage="Ingrese solo el tipo de licencia" ForeColor="Red" 
-            ValidationExpression="^[a-zA-Z ]*$">*</asp:RegularExpressionValidator>
-        &nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;
                     <asp:RequiredFieldValidator ID="rfvtipolicencia" runat="server" 
                         ControlToValidate="txttipolicencia" ErrorMessage="Ingrese el tipo de licencia" 
                         ForeColor="#CC0000">*</asp:RequiredFieldValidator>
@@ -102,11 +98,7 @@
                     <asp:Label ID="lblcedula" runat="server" Text="Cedula"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                     <asp:TextBox ID="txtcedula" runat="server" Width="154px"></asp:TextBox>
-                &nbsp;&nbsp;<asp:RegularExpressionValidator ID="revlicencia1" runat="server" 
-            ControlToValidate="txtcedula" 
-            ErrorMessage="Ingrese solo el tipo de licencia" ForeColor="Red" 
-            ValidationExpression="\d{10}">*</asp:RegularExpressionValidator>
-&nbsp;<asp:RequiredFieldValidator ID="rfvcedula" runat="server" 
+                &nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="rfvcedula" runat="server" 
                         ControlToValidate="txtcedula" ErrorMessage="Ingrese la cedula" 
                         ForeColor="#CC0000">*</asp:RequiredFieldValidator>
                     <br />
@@ -118,11 +110,7 @@
                     <asp:Label ID="lblnombre" runat="server" Text="Nombre"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                     <asp:TextBox ID="txtnombre" runat="server" Width="154px"></asp:TextBox>
-                &nbsp;&nbsp;<asp:RegularExpressionValidator ID="revlicencia0" 
-            runat="server" ControlToValidate="txtnombre" 
-            ErrorMessage="Ingrese su nombre correctamente" ForeColor="Red" 
-            ValidationExpression="^[a-zA-Z ]*$">*</asp:RegularExpressionValidator>
-        &nbsp;
+                &nbsp;&nbsp;&nbsp;
                     <asp:RequiredFieldValidator ID="rfvnombre" runat="server" 
                         ControlToValidate="txtnombre" ErrorMessage="Ingrese su nombre" 
                         ForeColor="#CC0000">*</asp:RequiredFieldValidator>
@@ -167,11 +155,7 @@
                     <asp:Label ID="lbltelefono" runat="server" Text="Telefono"></asp:Label>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
                     <asp:TextBox ID="txttelefono" runat="server" Width="154px"></asp:TextBox>
-                &nbsp;&nbsp;&nbsp;<asp:RegularExpressionValidator ID="revlicencia2" 
-            runat="server" ControlToValidate="txttelefono" 
-            ErrorMessage="Ingrese solo su numero de telefono" ForeColor="Red" 
-            ValidationExpression="^[0-9]*">*</asp:RegularExpressionValidator>
-&nbsp;<asp:RequiredFieldValidator ID="rfvtelefono" runat="server" 
+                &nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="rfvtelefono" runat="server" 
                         ControlToValidate="txttelefono" ErrorMessage="Ingrese un telefono" 
                         ForeColor="#CC0000">*</asp:RequiredFieldValidator>
                     <br />
@@ -199,7 +183,8 @@
     </asp:DropDownList>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" 
-            SelectCommand="SELECT [UserName], [UserId] FROM [vw_aspnet_Users]">
+            SelectCommand="SELECT [UserName], [UserId] FROM [vw_aspnet_Users]" 
+            onselecting="SqlDataSource1_Selecting">
         </asp:SqlDataSource>
                 </td>
             </tr>

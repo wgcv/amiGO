@@ -49,6 +49,7 @@
 	        <ul id="menu">
 		        <li><a href="chofer.aspx">Choferes</a></li>
 		        <li><a href="unidad.aspx">Unidades</a></li>
+                 <li><a href="TipoUnidades.aspx">Tipo de Unidades</a></li>
 		        <li><a href="servicios.aspx">Servicios</a></li>
 		        <li><a href="comentarios.aspx">Comentarios</a></li>
 		        <li><a href="contactanos.aspx">Contáctanos</a></li>

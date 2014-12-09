@@ -168,7 +168,7 @@ namespace amigo.admin
                 btnlimpiar.Enabled = false;
                 lblmensaje.Text = "";
                 btngrabar.Enabled = true;
-                btnlimpiar.Enabled = true;
+                btnlimpiar.Enabled = false;
                 txtcodigo.Enabled = false;
                 Session["modo"] = "E";
                 lblmensaje.Text = "Esta seguro que desea eliminar el registro?";

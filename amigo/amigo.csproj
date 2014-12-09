@@ -64,6 +64,7 @@
     <Content Include="admin\contactanos.aspx" />
     <Content Include="admin\default.aspx" />
     <Content Include="admin\servicios.aspx" />
+    <Content Include="admin\TipoUnidades.aspx" />
     <Content Include="admin\unidad.aspx" />
     <Content Include="contactanos.aspx" />
     <Content Include="enviado.aspx" />
@@ -203,6 +204,13 @@
     </Compile>
     <Compile Include="admin\servicios.aspx.designer.cs">
       <DependentUpon>servicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\TipoUnidades.aspx.cs">
+      <DependentUpon>TipoUnidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\TipoUnidades.aspx.designer.cs">
+      <DependentUpon>TipoUnidades.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\unidad.aspx.cs">
       <DependentUpon>unidad.aspx</DependentUpon>
