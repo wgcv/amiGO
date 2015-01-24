@@ -110,6 +110,7 @@
     <Content Include="nosotros.aspx" />
     <Content Include="Scripts\jquery.bxslider.min.js" />
     <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\localizacion.js" />
     <Content Include="Scripts\respon.js" />
     <Content Include="servicios.aspx" />
     <Content Include="solicitar.aspx" />

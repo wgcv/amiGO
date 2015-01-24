@@ -48,6 +48,7 @@
                             <asp:BoundField DataField="estado" HeaderText="Estado" />
                             <asp:BoundField DataField="userId" HeaderText="Usuario Id" />
                             <asp:ButtonField CommandName="eliminar" Text="Eliminar" />
+                            <asp:BoundField DataField="Direccion" HeaderText="Direccion" />
                         </Columns>
                         <EditRowStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                         <FooterStyle BackColor="#CCCCCC" />
