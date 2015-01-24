@@ -369,7 +369,12 @@ a#lblCusuario
     float:right;
     }
 
-@media screen and (max-width: 759px) {
+@media screen and (max-width: 759px) 
+{
+    #map-canvas {
+        width: 70%;
+        height: 350px;
+      }
   #menu {
     display: none;
     text-align: left;
