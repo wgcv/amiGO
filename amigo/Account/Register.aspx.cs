@@ -23,7 +23,7 @@ namespace amigo.Account
             string continueUrl = RegisterUser.ContinueDestinationPageUrl;
             if (String.IsNullOrEmpty(continueUrl))
             {
-                continueUrl = "~/";
+                continueUrl = "datos.aspx";
             }
             Response.Redirect(continueUrl);
         }

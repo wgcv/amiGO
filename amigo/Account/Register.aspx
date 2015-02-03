@@ -2,9 +2,16 @@
     CodeBehind="Register.aspx.cs" Inherits="amigo.Account.Register" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+    <style type="text/css">
+        .style1
+        {
+            margin-bottom: 0px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <asp:CreateUserWizard ID="RegisterUser" runat="server" EnableViewState="false" OnCreatedUser="RegisterUser_CreatedUser">
+    <asp:CreateUserWizard ID="RegisterUser" runat="server" EnableViewState="False" 
+        OnCreatedUser="RegisterUser_CreatedUser" CssClass="style1">
         <LayoutTemplate>
             <asp:PlaceHolder ID="wizardStepPlaceholder" runat="server"></asp:PlaceHolder>
             <asp:PlaceHolder ID="navigationPlaceholder" runat="server"></asp:PlaceHolder>
@@ -70,6 +77,31 @@
                 <CustomNavigationTemplate>
                 </CustomNavigationTemplate>
             </asp:CreateUserWizardStep>
+            <asp:WizardStep ID="datos" runat="server" StepType="Step" Title="Datos" 
+                ViewStateMode="Disabled">
+                <asp:Label ID="Label1" runat="server" Text="Numero Whatsapp"></asp:Label>
+                <asp:TextBox ID="txtWa" runat="server"></asp:TextBox>
+            </asp:WizardStep>
+<asp:CompleteWizardStep runat="server">
+    <ContentTemplate>
+        <table>
+            <tr>
+                <td align="center" colspan="2">
+                    Complete</td>
+            </tr>
+            <tr>
+                <td>
+                    Your account has been successfully created.</td>
+            </tr>
+            <tr>
+                <td align="right" colspan="2">
+                    <asp:Button ID="ContinueButton" runat="server" CausesValidation="False" 
+                        CommandName="Continue" Text="Continue" ValidationGroup="RegisterUser" />
+                </td>
+            </tr>
+        </table>
+    </ContentTemplate>
+            </asp:CompleteWizardStep>
         </WizardSteps>
     </asp:CreateUserWizard>
 </asp:Content>

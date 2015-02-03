@@ -59,6 +59,7 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Account\datos.aspx" />
     <Content Include="admin\chofer.aspx" />
     <Content Include="admin\comentarios.aspx" />
     <Content Include="admin\contactanos.aspx" />
@@ -165,6 +166,13 @@
     </Compile>
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\datos.aspx.cs">
+      <DependentUpon>datos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\datos.aspx.designer.cs">
+      <DependentUpon>datos.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\admin.Master.cs">
       <DependentUpon>admin.Master</DependentUpon>
