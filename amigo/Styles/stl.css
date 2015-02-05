@@ -295,7 +295,18 @@ section #holder_admin{
   padding: 1em 1em;
   margin: 0.4em;
 }
-
+section #holder_taxista{
+   vertical-align: text-top;
+  text-align: left;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  background:#fff ;
+  border: 2px solid #b2b2b2;
+  border-radius: 0.5em;
+  padding: 1em 1em;
+  margin: 0.4em;
+}
 
 #espacio #holder{
    vertical-align: text-top;
@@ -412,6 +423,18 @@ a#lblCusuario
     header .header2 {
     display: none;
   }
+  section #holder_taxista{
+   vertical-align: text-top;
+  text-align: left;
+  display: block;
+  overflow: hidden;
+  width: 90%;
+  background:#fff ;
+  border: 2px solid #b2b2b2;
+  border-radius: 0.5em;
+  padding: 1em 1em;
+  margin: 0.4em;
+}
   header .header1 {
     padding: 0;
     display: block;

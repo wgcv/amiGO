@@ -125,6 +125,7 @@
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Styles\stl.css" />
     <Content Include="svrcliente.aspx" />
+    <Content Include="taxista\Default.aspx" />
     <Content Include="unidades.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -297,6 +298,20 @@
     <Compile Include="svrcliente.aspx.designer.cs">
       <DependentUpon>svrcliente.aspx</DependentUpon>
     </Compile>
+    <Compile Include="taxista\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="taxista\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="taxista\serviciotaxi.Master.cs">
+      <DependentUpon>serviciotaxi.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="taxista\serviciotaxi.Master.designer.cs">
+      <DependentUpon>serviciotaxi.Master</DependentUpon>
+    </Compile>
     <Compile Include="unidades.aspx.cs">
       <DependentUpon>unidades.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -318,6 +333,7 @@
     <Content Include="admin\web.config" />
     <None Include="logos\Thumbs.db" />
     <None Include="Styles\stl.styl" />
+    <Content Include="taxista\serviciotaxi.Master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

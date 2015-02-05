@@ -1,4 +1,5 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.Master.cs" Inherits="amigo.admins" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="serviciotaxi.master.cs" Inherits="amigo.taxista.serviciotaxi" %>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -21,7 +22,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form runat="server">
+    <form id="Form1" runat="server">
 
     <header>
         <span class="header1">
@@ -42,18 +43,21 @@
         </span>
         <span class="header2">
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox> 
-            <asp:Button ID="Button1" runat="server" Text="Button" onclick="Button1_Click"></asp:Button>
+            <asp:Button ID="Button1" runat="server" Text="Button"></asp:Button>
         </span>
         <nav>
+
+        <!--
             <div id="mostrarMenu"><br></div>
 	        <ul id="menu">
 		        <li><a href="chofer.aspx">Choferes</a></li>
 		        <li><a href="unidad.aspx">Unidades</a></li>
+                 <li><a href="TipoUnidades.aspx">Tipo de Unidades</a></li>
 		        <li><a href="servicios.aspx">Servicios</a></li>
 		        <li><a href="comentarios.aspx">Comentarios</a></li>
 		        <li><a href="contactanos.aspx">Contáctanos</a></li>
 	        </ul>
-
+            -->
         </nav>
         <div class="header4"> 
         </div>
@@ -63,7 +67,7 @@
     <figcaption>
     </figcaption>
     <section>
-<article id="holder_admin">
+<article id="holder_taxista">
        <asp:ContentPlaceHolder ID="MainContent" runat="server">
         
         </asp:ContentPlaceHolder>
@@ -71,10 +75,10 @@
             </section>
 
 
-    <footer>
-    	<a href="#"> <img src="/logos/twitter.png" class="logo" /></a>
-	    <a href="#"> <img src="/logos/instagram.png" class="logo" /></a>
-	    <a href="#"> <img src="/logos/facebook.png" class="logo" /></a>
+   <footer>
+    	<a href="https://twitter.com/trans_amigo"> <img src="/logos/twitter.png" class="logo" /></a>
+	    <a href="http://instagram.com/trans_amigo"> <img src="/logos/instagram.png" class="logo" /></a>
+	    <a href="https://www.facebook.com/pages/Amigo/885150168161893"> <img src="/logos/facebook.png" class="logo" /></a>
         <br />Power by: WGCV
     </footer>
 
