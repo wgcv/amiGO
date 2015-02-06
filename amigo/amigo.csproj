@@ -67,6 +67,7 @@
     <Content Include="admin\servicios.aspx" />
     <Content Include="admin\TipoUnidades.aspx" />
     <Content Include="admin\unidad.aspx" />
+    <Content Include="consultataxi.aspx" />
     <Content Include="contactanos.aspx" />
     <Content Include="enviado.aspx" />
     <Content Include="images\4x41.png" />
@@ -112,6 +113,7 @@
     <Content Include="Scripts\jquery.bxslider.min.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\localizacion.js" />
+    <Content Include="Scripts\localizacionTaxi.js" />
     <Content Include="Scripts\respon.js" />
     <Content Include="servicios.aspx" />
     <Content Include="solicitar.aspx" />
@@ -230,6 +232,13 @@
     </Compile>
     <Compile Include="admin\unidad.aspx.designer.cs">
       <DependentUpon>unidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consultataxi.aspx.cs">
+      <DependentUpon>consultataxi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consultataxi.aspx.designer.cs">
+      <DependentUpon>consultataxi.aspx</DependentUpon>
     </Compile>
     <Compile Include="contactanos.aspx.cs">
       <DependentUpon>contactanos.aspx</DependentUpon>

@@ -18,7 +18,24 @@ namespace amigo.taxista
         protected void Page_Load(object sender, EventArgs e)
         {
             u = System.Web.Security.Membership.GetUser();
+            string latitud = "0";
+            string longitud = "0";
+            if (Request.QueryString["latitud"] != null && Request.QueryString["longitud"] != null)
+            {
+                latitud = Request.QueryString["latitud"];
+                longitud = Request.QueryString["longitud"];
+            }
+            ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
+            string cadena_conexion = param.ConnectionString;
+            SqlConnection conexion = new SqlConnection(cadena_conexion);
+            string sql = "UPDATE  ubicacionTaxi SET latitud = " + latitud + " , longitud = " + longitud + " WHERE UserId='" + u.ProviderUserKey.ToString() + "'";
 
+            SqlCommand comando = new SqlCommand(sql, conexion);
+            conexion.Open();
+            int numero_registro = comando.ExecuteNonQuery();
+            conexion.Close();
+
+            /*
             ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
             string cadenaConexion = param.ConnectionString;
             SqlConnection conexion = new SqlConnection(cadenaConexion);
@@ -65,9 +82,9 @@ namespace amigo.taxista
                 btnSalir.Visible = true;
                 btnDisponible.Visible = false;
             }
+            */
 
         }
-
         protected void btnPasajero_Click(object sender, EventArgs e)
         {
             ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
@@ -126,5 +143,7 @@ namespace amigo.taxista
             Response.Redirect("~/");
            
         }
+
+      
     }
 }

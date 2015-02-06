@@ -15,7 +15,7 @@
 	<script type="text/javascript" src="/Scripts/jquery.js"></script>
 	<script type="text/javascript" src="/Scripts/jquery.bxslider.min.js"></script>
 	<script type="text/javascript" src="/Scripts/respon.js"></script>
-
+    <script type="text/javascript" src="/Scripts/localizacionTaxi.js"></script>
     
 
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
