@@ -138,8 +138,12 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="wgcv\Distancias\index.html" />
+    <Content Include="wgcv\Distancias\script.js" />
     <Content Include="wgcv\index.html" />
     <Content Include="wgcv\script.js" />
+    <Content Include="wgcv\ubicacion taxist\index.html" />
+    <Content Include="wgcv\ubicacion taxist\localizacion.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\ChangePassword.aspx.cs">
@@ -343,6 +347,7 @@
     <None Include="logos\Thumbs.db" />
     <None Include="Styles\stl.styl" />
     <Content Include="taxista\serviciotaxi.Master" />
+    <None Include="wgcv\ubicacion taxist\ubicacion.json" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
@@ -352,7 +357,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>46953</DevelopmentServerPort>
+          <DevelopmentServerPort>1670</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

@@ -21,3 +21,8 @@ C:\Users\Nadia Terranova\Desktop\gustavo Cevallos\amiGO-master\amiGO-master\amig
 C:\Users\Nadia Terranova\Desktop\gustavo Cevallos\amiGO-master\amiGO-master\amigo\obj\Debug\amigo.csprojResolveAssemblyReference.cache
 C:\Users\Nadia Terranova\Desktop\gustavo Cevallos\amiGO-master\amiGO-master\amigo\obj\Debug\amigo.dll
 C:\Users\Nadia Terranova\Desktop\gustavo Cevallos\amiGO-master\amiGO-master\amigo\obj\Debug\amigo.pdb
+C:\Users\Nadia Terranova\Desktop\amiGO\amigo\bin\amigo.dll
+C:\Users\Nadia Terranova\Desktop\amiGO\amigo\bin\amigo.pdb
+C:\Users\Nadia Terranova\Desktop\amiGO\amigo\obj\Debug\amigo.csprojResolveAssemblyReference.cache
+C:\Users\Nadia Terranova\Desktop\amiGO\amigo\obj\Debug\amigo.dll
+C:\Users\Nadia Terranova\Desktop\amiGO\amigo\obj\Debug\amigo.pdb
