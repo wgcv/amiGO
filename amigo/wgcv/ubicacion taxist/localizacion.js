@@ -28,7 +28,7 @@ ubicacion();
    
 }
 function ubicacion(){
-$.getJSON('ubicacion.json', function(contenidoDelArchivo){
+$.getJSON('../../consultataxi.aspx?id=30381938-62b8-4e56-92ad-cf1bac906134', function(contenidoDelArchivo){
     console.log(contenidoDelArchivo.latitud);
     console.log(contenidoDelArchivo.longitud);
     taxi =  new google.maps.LatLng(contenidoDelArchivo.latitud, contenidoDelArchivo.longitud);
