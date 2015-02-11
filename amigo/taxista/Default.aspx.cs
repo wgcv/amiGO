@@ -35,11 +35,11 @@ namespace amigo.taxista
             int numero_registro = comando.ExecuteNonQuery();
             conexion.Close();
 
-            /*
-            ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
+            
+             param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
             string cadenaConexion = param.ConnectionString;
-            SqlConnection conexion = new SqlConnection(cadenaConexion);
-            string sql = "SELECT * FROM registroCarrera WHERE activa='A' AND ChoferId='" + u.ProviderUserKey.ToString()+"'";
+             conexion = new SqlConnection(cadenaConexion);
+             sql = "SELECT * FROM registroCarrera WHERE activa='A' AND ChoferId='" + u.ProviderUserKey.ToString()+"'";
             SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -75,14 +75,14 @@ namespace amigo.taxista
 
                 sql = "UPDATE  chofer SET disponible = 'D' WHERE UserId='" + u.ProviderUserKey.ToString()+"'";
 
-                SqlCommand comando = new SqlCommand(sql, conexion);
+                 comando = new SqlCommand(sql, conexion);
                 conexion.Open();
-                int numero_registro = comando.ExecuteNonQuery();
+                 numero_registro = comando.ExecuteNonQuery();
                 conexion.Close();
                 btnSalir.Visible = true;
                 btnDisponible.Visible = false;
             }
-            */
+            
 
         }
         protected void btnPasajero_Click(object sender, EventArgs e)
