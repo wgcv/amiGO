@@ -21,7 +21,7 @@ if (navigator.geolocation) {
         latitud = geo.coords.latitude;
         longitud = geo.coords.longitude;
 
-        setTimeout(redireccionar, 1000);
+        setTimeout(redireccionar, 3000);
     }
     
 }
