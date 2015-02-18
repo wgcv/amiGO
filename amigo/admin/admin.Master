@@ -53,6 +53,7 @@
 		        <li><a href="servicios.aspx">Servicios</a></li>
 		        <li><a href="comentarios.aspx">Comentarios</a></li>
 		        <li><a href="contactanos.aspx">Contáctanos</a></li>
+                <li><a href="Estadisticas.aspx  ">Estadística</a></li>
 	        </ul>
 
         </nav>

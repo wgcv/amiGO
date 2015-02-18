@@ -30,13 +30,8 @@ namespace amigo.admin
             btneliminar.Visible = false;
             if (!Page.IsPostBack)
             {
-                ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
-                string cadenaConexion = param.ConnectionString;
-                SqlConnection conexion = new SqlConnection(cadenaConexion);
-                string sql = "SELECT codigo,nombre,correo,asunto,mensaje,leido FROM contactanos WHERE leido='N'";
-                SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
+                clase_general general = new clase_general();
+                DataSet ds = general.consulta_contactanos("G", "", "");
                 grvcontactanos.DataSource = ds;
                 grvcontactanos.DataBind();
             }
@@ -44,29 +39,14 @@ namespace amigo.admin
 
         protected void btnrefrescar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/admin/contactanos.aspx");
+            Response.Redirect("contactanos.aspx");
         }
 
         protected void btneliminar_Click(object sender, EventArgs e)
         {
-              lblmensaje.Text = "";
-            ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
-            string cadena_conexion = param.ConnectionString;
-            SqlConnection conexion = new SqlConnection(cadena_conexion);
-            string sql = "UPDATE contactanos SET leido = 'Y' WHERE codigo = " + Session["codigo"];
-            SqlCommand comando = new SqlCommand(sql, conexion);
-            conexion.Open();
-            int numero_registro = comando.ExecuteNonQuery();
-            if (numero_registro == 1)
-            {
-                lblmensaje.Text = "La Transaccion fue realizada con exito ";
-            }
-            else
-            {
-
-                lblmensaje.Text = "Ocurrio un error al ejecutar la transaccion ";
-            }
-            conexion.Close();
+            clase_general general = new clase_general();
+            int numero_registro = general.elimina_contactanos(Convert.ToInt32(Session["codigo"]));
+            Response.Redirect("contactanos.aspx");
         }
 
         
@@ -74,15 +54,10 @@ namespace amigo.admin
         protected void btnbuscar_Click(object sender, EventArgs e)
         {
 
-            ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
-            string cadena_conexion = param.ConnectionString;
-            SqlConnection conexion = new SqlConnection(cadena_conexion);
-            string sql = "SELECT codigo,nombre,correo,asunto,mensaje,leido FROM contactanos WHERE  " + ddlbuscar.SelectedValue + " LIKE '%" + txtbuscar.Text + "%'";
-            SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
-            DataSet ds = new DataSet(); //Ni tiene ningun parametro, guarda los datos.
-            da.Fill(ds);//Ejecutamos la sentencia SELECT y guardamos en ds
-            grvcontactanos.DataSource = ds; //Cogemos el dato del DataSet
-            grvcontactanos.DataBind();//refrescamos
+            clase_general general = new clase_general();
+            DataSet ds = general.consulta_contactanos("E", ddlbuscar.SelectedValue, txtbuscar.Text);
+            grvcontactanos.DataSource = ds;
+            grvcontactanos.DataBind();
         }
 
         protected void grvcontactanos_RowCommand(object sender, GridViewCommandEventArgs e)

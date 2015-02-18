@@ -8,8 +8,7 @@
 &nbsp;&nbsp;
         <asp:DropDownList ID="ddlbuscar" runat="server">
             <asp:ListItem Value="codigo">Codigo</asp:ListItem>
-            <asp:ListItem Value="nombre">Nombre</asp:ListItem>
-            <asp:ListItem Value="correo">Correo</asp:ListItem>
+            <asp:ListItem Value="tipo">Tipo</asp:ListItem>
         </asp:DropDownList>
 &nbsp;&nbsp;
         <asp:TextBox ID="txtbuscar" runat="server" Width="157px"></asp:TextBox>
@@ -35,6 +34,7 @@
                             <asp:ButtonField CommandName="modificar" Text="Modificar" />
                             <asp:BoundField DataField="codigo" HeaderText="Codigo" />
                             <asp:BoundField DataField="tipo" HeaderText="Tipo de Unidad" />
+                            <asp:BoundField DataField="estado" HeaderText="Estado" />
                             <asp:ButtonField CommandName="eliminar" Text="Eliminar" />
                         </Columns>
                         <FooterStyle BackColor="#CCCCCC" />
@@ -86,6 +86,21 @@
                         ForeColor="#CC0000">*</asp:RequiredFieldValidator>
                     <br />
                 </td>
+            </tr>
+            <tr>
+                <td class="style1">
+                    &nbsp;</td>
+                <td>
+                    <asp:Label ID="lblestado" runat="server" Text="Estado"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="txtestado" runat="server" Width="66px">A</asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="style1">
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
             </tr>
         </table>
         &nbsp;</p>

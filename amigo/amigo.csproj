@@ -42,6 +42,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -60,10 +61,12 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\datos.aspx" />
+    <Content Include="Account\default.aspx" />
     <Content Include="admin\chofer.aspx" />
     <Content Include="admin\comentarios.aspx" />
     <Content Include="admin\contactanos.aspx" />
     <Content Include="admin\default.aspx" />
+    <Content Include="admin\Estadisticas.aspx" />
     <Content Include="admin\servicios.aspx" />
     <Content Include="admin\TipoUnidades.aspx" />
     <Content Include="admin\unidad.aspx" />
@@ -181,6 +184,13 @@
     <Compile Include="Account\datos.aspx.designer.cs">
       <DependentUpon>datos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Account\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\admin.Master.cs">
       <DependentUpon>admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -216,6 +226,13 @@
     <Compile Include="admin\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\Estadisticas.aspx.cs">
+      <DependentUpon>Estadisticas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Estadisticas.aspx.designer.cs">
+      <DependentUpon>Estadisticas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\servicios.aspx.cs">
       <DependentUpon>servicios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -237,6 +254,7 @@
     <Compile Include="admin\unidad.aspx.designer.cs">
       <DependentUpon>unidad.aspx</DependentUpon>
     </Compile>
+    <Compile Include="clase_general.cs" />
     <Compile Include="consultataxi.aspx.cs">
       <DependentUpon>consultataxi.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -349,6 +367,9 @@
     <Content Include="taxista\serviciotaxi.Master" />
     <None Include="wgcv\ubicacion taxist\ubicacion.json" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>
@@ -357,7 +378,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1670</DevelopmentServerPort>
+          <DevelopmentServerPort>3832</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

@@ -47,8 +47,8 @@
                             <asp:BoundField DataField="telefono" HeaderText="Telefono" />
                             <asp:BoundField DataField="estado" HeaderText="Estado" />
                             <asp:BoundField DataField="userId" HeaderText="Usuario Id" />
+                            <asp:BoundField DataField="disponible" HeaderText="Disponible" />
                             <asp:ButtonField CommandName="eliminar" Text="Eliminar" />
-                            <asp:BoundField DataField="Direccion" HeaderText="Direccion" />
                         </Columns>
                         <EditRowStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                         <FooterStyle BackColor="#CCCCCC" />
@@ -69,10 +69,9 @@
                     <asp:Button ID="btnnuevo" runat="server" Text="Nuevo" Width="108px" 
             Height="42px" CausesValidation="False" onclick="btnnuevo_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btnrefrescar" runat="server" Text="Refrescar" 
-            Width="108px" Height="42px" CausesValidation="False" 
-            onclick="btnrefrescar_Click" />
-    </p>
+                    <asp:Button ID="btnrefrescar" runat="server" Text="Refrescar" Width="108px" 
+                        Height="42px"  CausesValidation="false" onclick="btnrefrescar_Click" />
+                    </p>
     <p>
         &nbsp;<tr><td class="style3"><asp:Label ID="lblcodigo" runat="server" Text="Codigo"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
@@ -178,20 +177,18 @@
                 </td>
                 <td>
                 
-    <asp:Label ID="Label1" runat="server" Text="Usuario"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:DropDownList
-        ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" 
+    <asp:Label ID="Label1" runat="server" Text="Usuario"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <asp:DropDownList
+        ID="DropDownList1" runat="server" 
             DataTextField="UserName" DataValueField="UserId">
     </asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" 
-            SelectCommand="SELECT [UserName], [UserId] FROM [vw_aspnet_Users]" 
-            onselecting="SqlDataSource1_Selecting">
-        </asp:SqlDataSource>
-                </td>
-            </tr>
-            <tr>
-                <td class="style3">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <p>
+                
+    <asp:Label ID="lbldisponible" runat="server" Text="Disponible "></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="txtdisponible" runat="server" Width="40px" 
+            MaxLength="1">D</asp:TextBox>
+                <p>
+                    &nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;
                     <br />
                     <br />

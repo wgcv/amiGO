@@ -21,6 +21,8 @@ namespace amigo.admin
             lblmodelo.Visible = false;
             txtmodelo.Visible = false;
             lblmarca.Visible = false;
+            txtdisponible.Visible = false;
+            lbldisponible.Visible = false;
             txtmarca.Visible = false;
             lblaño.Visible = false;
             txtaño.Visible = false;
@@ -41,30 +43,39 @@ namespace amigo.admin
 
             if (!Page.IsPostBack)
             {
-                ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
-                string cadenaConexion = param.ConnectionString;
-                SqlConnection conexion = new SqlConnection(cadenaConexion);
-                string sql = "SELECT * FROM unidades WHERE estado='A'";
-                SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
+                clase_general general = new clase_general();
+                DataSet ds = general.consulta_unidades("G", "", "");
                 grvunidad.DataSource = ds;
                 grvunidad.DataBind();
+               
+                DataSet d1 = general.consulta_zona();
+                ddlZona.DataSource = d1.Tables[0].DefaultView;
+                ddlZona.DataValueField = "codigo";
+                ddlZona.DataTextField = "nombre_zona";
+                ddlZona.DataBind();
+
+                DataSet d2 = general.consulta_chofer("G", "", "");
+                ddlChofe.DataSource = d2.Tables[0].DefaultView;
+                ddlChofe.DataValueField = "codigo";
+                ddlChofe.DataTextField = "nombre";
+                ddlChofe.DataBind();
+
+                DataSet d3 = general.consulta_tipoUnidad();
+                ddlTipoUnidad.DataSource = d3.Tables[0].DefaultView;
+                ddlTipoUnidad.DataValueField = "codigo";
+                ddlTipoUnidad.DataTextField = "tipo";
+                ddlTipoUnidad.DataBind();
+
             }
         }
 
         protected void btnbuscar_Click(object sender, EventArgs e)
         {
-            
-                ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
-                string cadena_conexion = param.ConnectionString;
-                SqlConnection conexion = new SqlConnection(cadena_conexion);
-                string sql = "SELECT * FROM unidades WHERE estado='A' AND " + ddllist.SelectedValue + " LIKE '%" + txtbuscar.Text + "%'";
-                SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
-                DataSet ds = new DataSet(); //Ni tiene ningun parametro, guarda los datos.
-                da.Fill(ds);//Ejecutamos la sentencia SELECT y guardamos en ds
-                grvunidad.DataSource = ds; //Cogemos el dato del DataSet
-                grvunidad.DataBind();//refrescamos
+
+            clase_general general = new clase_general();
+            DataSet ds = general.consulta_unidades("E", ddllist.SelectedValue, txtbuscar.Text);
+            grvunidad.DataSource = ds;
+            grvunidad.DataBind();
             
         }
 
@@ -79,8 +90,11 @@ namespace amigo.admin
             txtvalorKm.Text = "";
            
             txtestado.Text = "";
+            txtdisponible.Text = "";
 
             lblmensaje.Text = "";
+            txtdisponible.Visible = true;
+            lbldisponible.Visible = true;
 
             txtmodelo.Visible = true;
             txtmarca.Visible = true;
@@ -119,7 +133,7 @@ namespace amigo.admin
             txtplaca.Enabled = true;
             txtvalorKm.Enabled = true;
             ddlZona.Enabled = true;
-            Session["modo"] = "I"; //Es para saber si estoy insertando. El objeto Session me sirve para todos los botones
+            Session["codi"] = 100000;
         }
 
         protected void btnlimpiar_Click(object sender, EventArgs e)
@@ -133,7 +147,12 @@ namespace amigo.admin
             ddlChofe.Text = "";
             txtestado.Text = "";
 
+            lbldisponible.Text = "";
+            txtdisponible.Text = "";
+
             lblmensaje.Text = "";
+            txtdisponible.Visible = true;
+            lbldisponible.Visible = true;
 
     
             txtmodelo.Enabled = true;
@@ -182,56 +201,27 @@ namespace amigo.admin
 
         protected void btngrabar_Click(object sender, EventArgs e)
         {
-            
-                lblmensaje.Text = "";
-                ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
-                string cadena_conexion = param.ConnectionString;
-                SqlConnection conexion = new SqlConnection(cadena_conexion);
-                string sql = "";
+            int numero_registro = 0;
+            if (Session["modo"] == "E")
+            {
+                clase_general general = new clase_general();
+                general = new clase_general();
+                numero_registro = general.elimina_unidades(Convert.ToInt32(Session["codigo"]));
 
-                if (Session["modo"] == "I")
-                {
-                    sql = "INSERT INTO unidades(modelo,marca,ano,placa,valorKm,zona,chofer,tipoUnidad,estado) VALUES(' " + txtmodelo.Text + " ' , ' " + txtmarca.Text + " ' , " + Convert.ToInt16(txtaño.Text) + ", ' " + txtplaca.Text + " ' , " + Convert.ToDecimal(txtvalorKm.Text) + " , " + ddlZona.SelectedValue + " , " + ddlChofe.SelectedValue + " , " + ddlTipoUnidad.SelectedValue + " , 'A')";
-                }
-                else
-                {
-                    if (Session["modo"] == "M")
-                    {
-                        sql = "UPDATE  unidades SET modelo = '" + txtmodelo.Text + " ', marca = '" + txtmarca.Text + " ', ano= " + Convert.ToInt16(txtaño.Text) + " ,placa = '" + txtplaca.Text + " ', valorKm= " + Convert.ToDecimal(txtvalorKm.Text) + " , zona= " + ddlZona.SelectedValue + " , chofer= " + ddlChofe.SelectedValue + " , tipoUnidad= " + ddlTipoUnidad.SelectedValue + " , estado = '" + txtestado.Text + "' WHERE codigo=" + Session["codigo"];
-
-                    }
-
-
-
-                    else
-                    {//Eliminacion, es una elminacion logica, no fisica. Quiere decir que solo cambio el estado a Innactivo
-                        sql = "UPDATE unidades SET estado = 'I' WHERE codigo = " + Session["codigo"];
-
-                    }
+            }
+            else
+            {
+                clase_general general = new clase_general();
+                numero_registro = general.ins_updateunidades(Convert.ToInt32(Session["codi"]), txtmodelo.Text, txtmarca.Text, Convert.ToInt16(txtaño.Text), txtplaca.Text, Convert.ToDecimal(txtvalorKm.Text), Convert.ToInt16(ddlZona.SelectedValue), Convert.ToInt16(ddlChofe.SelectedValue), Convert.ToInt16(ddlTipoUnidad.SelectedValue), txtestado.Text, txtdisponible.Text);
+            }
+          
+            Response.Redirect("unidad.aspx");
 
                 }
-
-
-
-                SqlCommand comando = new SqlCommand(sql, conexion);
-                conexion.Open();
-                int numero_registro = comando.ExecuteNonQuery();
-                if (numero_registro == 1)
-                {
-                    lblmensaje.Text = "La Transaccion fue realizada con exito ";
-                }
-                else
-                {
-
-                    lblmensaje.Text = "Ocurrio un error al ejecutar la transaccion ";
-                }
-                conexion.Close();
-            
-
-        }
 
         protected void grvunidad_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+
             txtmodelo.Visible = true;
             txtmarca.Visible = true;
             txtestado.Visible = true;
@@ -258,7 +248,9 @@ namespace amigo.admin
             btnlimpiar.Enabled = true;
             btngrabar.Visible = true;
             btnlimpiar.Visible = true;
-
+            txtdisponible.Visible = true;
+            lbldisponible.Visible = true;
+            lbldisponible.Visible = true;
             int fila = Convert.ToInt32(e.CommandArgument); //Recibe la fila que selecciono en SDtring y la convertimos en Entero
             GridViewRow registro = grvunidad.Rows[fila];//Guarda los datos de la fila en un registro
 
@@ -268,16 +260,17 @@ namespace amigo.admin
             txtaño.Text = registro.Cells[4].Text;
             txtplaca.Text = registro.Cells[5].Text;//Cells nos ayuda a  recuperar el texto de cada celda
             txtvalorKm.Text = registro.Cells[6].Text;
-            ddlZona.SelectedValue = registro.Cells[7].Text;
-            ddlChofe.SelectedValue = registro.Cells[8].Text;
-            ddlTipoUnidad.SelectedValue = registro.Cells[9].Text;
+           /* ddlZona.SelectedItem.Text = registro.Cells[7].Text;
+            ddlChofe.SelectedItem.Text = registro.Cells[8].Text;
+            ddlTipoUnidad.SelectedItem.Text = registro.Cells[9].Text;*/
             txtestado.Text = registro.Cells[10].Text;
-
 
             Session["codigo"] = registro.Cells[1].Text;//Es como una variable global
             if (e.CommandName == "modificar")//Pregunta si di a moficcar o a eliminar
             {
 
+
+                txtdisponible.Enabled = true;
                 txtmodelo.Enabled = true;
                 txtmarca.Enabled = true;
                 txtestado.Enabled = true;
@@ -296,12 +289,15 @@ namespace amigo.admin
                 txtcodigo.Enabled = false;
 
                 lblmensaje.Text = "";
+                Session["codi"] = txtcodigo.Text;
                 Session["modo"] = "M";
 
             }
             else
             {
+                lbldisponible.Visible = true;
                 txtmodelo.Enabled = false;
+                txtdisponible.Enabled = false;
                 txtmarca.Enabled = false;
                 txtestado.Enabled = false;
                 txtcodigo.Enabled = false;
@@ -321,13 +317,41 @@ namespace amigo.admin
                 Session["modo"] = "E";
                 lblmensaje.Text = "Esta seguro que desea eliminar el registro?";
 
-
-
-
-
-
-
             }
+        }
+
+        protected void grvunidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ddlZona_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+       
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+      
+     
+        protected void ddlChofe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ddlTipoUnidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void grvunidad_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+
         }
       
     }

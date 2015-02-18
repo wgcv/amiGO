@@ -25,17 +25,12 @@ namespace amigo.admin
             lblmensaje.Visible = false;
             btngrabar.Visible = false;
             btnlimpiar.Visible = false;
-          
+
 
             if (!Page.IsPostBack)
             {
-                ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
-                string cadenaConexion = param.ConnectionString;
-                SqlConnection conexion = new SqlConnection(cadenaConexion);
-                string sql = "SELECT * FROM servicios WHERE estado='A'";
-                SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
+                clase_general general = new clase_general();
+                DataSet ds = general.consulta_servicios("G", "", "");
                 grvservicios.DataSource = ds;
                 grvservicios.DataBind();
             }
@@ -68,8 +63,7 @@ namespace amigo.admin
             lblmensaje.Text = "";
             btngrabar.Enabled = true;
             btnlimpiar.Enabled = true;
-
-            Session["modo"] = "I"; //Es para saber si estoy insertando. El objeto Session me sirve para todos los botones
+            Session["codi"] = 100000;
         }
 
         protected void btnrefrescar_Click(object sender, EventArgs e)
@@ -112,15 +106,10 @@ namespace amigo.admin
 
         protected void btnbuscar_Click(object sender, EventArgs e)
         {
-            ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
-            string cadena_conexion = param.ConnectionString;
-            SqlConnection conexion = new SqlConnection(cadena_conexion);
-            string sql = "SELECT * FROM servicios WHERE estado='A' AND " + ddlbuscar.SelectedValue + " LIKE '%" + txtbuscar.Text + "%'";
-            SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
-            DataSet ds = new DataSet(); //Ni tiene ningun parametro, guarda los datos.
-            da.Fill(ds);//Ejecutamos la sentencia SELECT y guardamos en ds
-            grvservicios.DataSource = ds; //Cogemos el dato del DataSet
-            grvservicios.DataBind();//refrescamos
+            clase_general general = new clase_general();
+            DataSet ds = general.consulta_servicios("E", ddlbuscar.SelectedValue, txtbuscar.Text);
+            grvservicios.DataSource = ds;
+            grvservicios.DataBind();
         }
 
         protected void grvservicios_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -157,6 +146,7 @@ namespace amigo.admin
                 txtcodigo.Enabled = false;
                 lblmensaje.Text = "";
                 Session["modo"] = "M";
+                Session["codi"] = txtcodigo.Text;
 
             }
             else
@@ -177,50 +167,20 @@ namespace amigo.admin
 
         protected void btngrabar_Click(object sender, EventArgs e)
         {
-            lblmensaje.Text = "";
-            ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
-            string cadena_conexion = param.ConnectionString;
-            SqlConnection conexion = new SqlConnection(cadena_conexion);
-            string sql = "";
-
-            if (Session["modo"] == "I")
+            int numero_registro = 0;
+            if (Session["modo"] == "E")
             {
-                sql = "INSERT INTO servicios(servicio, valor, estado) VALUES(' " + txtservicio.Text + " ' , " + Convert.ToDecimal(txtvalor.Text) + ", 'A')";
+                clase_general general = new clase_general();
+                numero_registro = general.elimina_servicios(Convert.ToInt32(Session["codigo"]));
+                
             }
-            else
-            {
-                if (Session["modo"] == "M")
-                {
-                    sql = "UPDATE  servicios SET servicio = '" + txtservicio.Text + " ', valor= " + Convert.ToDecimal(txtvalor.Text) + " , estado = '" + txtestado.Text + "' WHERE codigo=" + Session["codigo"];
-
+            else {
+                clase_general general = new clase_general();
+                numero_registro = general.ins_updateservicios(Convert.ToInt32(Session["codi"]),txtservicio.Text, Convert.ToDecimal(txtvalor.Text), txtestado.Text);
+                Response.Redirect("servicios.aspx");
+            }
+            Response.Redirect("servicios.aspx");
                 }
 
-
-
-                else
-                {//Eliminacion, es una elminacion logica, no fisica. Quiere decir que solo cambio el estado a Innactivo
-                    sql = "UPDATE servicios SET estado = 'I' WHERE codigo = " + Session["codigo"];
-
-                }
-
-            }
-
-
-
-            SqlCommand comando = new SqlCommand(sql, conexion);
-            conexion.Open();
-            int numero_registro = comando.ExecuteNonQuery();
-            if (numero_registro == 1)
-            {
-                lblmensaje.Text = "La Transaccion fue realizada con exito ";
-            }
-            else
-            {
-
-                lblmensaje.Text = "Ocurrio un error al ejecutar la transaccion ";
-            }
-            conexion.Close();
-        }
-
-    }
+}
 }

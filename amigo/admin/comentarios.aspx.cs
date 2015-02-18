@@ -24,13 +24,8 @@ namespace amigo.admin
             btneliminar.Visible = false;
             if (!Page.IsPostBack)
             {
-                ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
-                string cadenaConexion = param.ConnectionString;
-                SqlConnection conexion = new SqlConnection(cadenaConexion);
-                string sql = "SELECT codigo,nombre,mensaje FROM comentarios WHERE visible='T'";
-                SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
+                clase_general general = new clase_general();
+                DataSet ds = general.consulta_comentarios();
                 grvcomentarios.DataSource = ds;
                 grvcomentarios.DataBind();
             }
@@ -64,24 +59,10 @@ namespace amigo.admin
 
         protected void btneliminar_Click(object sender, EventArgs e)
         {
-            lblmensaje.Text = "";
-            ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
-            string cadena_conexion = param.ConnectionString;
-            SqlConnection conexion = new SqlConnection(cadena_conexion);
-            string sql = "UPDATE comentarios SET visible = 'F' WHERE codigo = " + Session["codigo"];
-            SqlCommand comando = new SqlCommand(sql, conexion);
-            conexion.Open();
-            int numero_registro = comando.ExecuteNonQuery();
-            if (numero_registro == 1)
-            {
-                lblmensaje.Text = "La Transaccion fue realizada con exito ";
-            }
-            else
-            {
-
-                lblmensaje.Text = "Ocurrio un error al ejecutar la transaccion ";
-            }
-            conexion.Close();
+            clase_general general = new clase_general();
+            int numero_registro = general.elimina_comentarios(Convert.ToInt32(Session["codigo"]));
+            Response.Redirect("comentarios.aspx");
+                
         }
 
         protected void btnrefrescar_Click(object sender, EventArgs e)

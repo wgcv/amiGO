@@ -59,7 +59,8 @@
                         Height="130px" 
                         Width="1065px" BackColor="White" BorderColor="#999999" BorderStyle="Solid" 
                         BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" 
-                        onrowcommand="grvunidad_RowCommand">
+                        onrowcommand="grvunidad_RowCommand" 
+                        onselectedindexchanged="grvunidad_SelectedIndexChanged1">
                         <AlternatingRowStyle BackColor="#CCCCCC" />
                         <Columns>
                             <asp:ButtonField CommandName="modificar" Text="Modificar" />
@@ -69,9 +70,9 @@
                             <asp:BoundField DataField="ano" HeaderText="Año" />
                             <asp:BoundField DataField="placa" HeaderText="Placa" />
                             <asp:BoundField DataField="valorKm" HeaderText="Valor Km" />
-                            <asp:BoundField DataField="zona" HeaderText="Zona" />
-                            <asp:BoundField DataField="chofer" HeaderText="Chofer" />
-                            <asp:BoundField DataField="tipoUnidad" HeaderText="Tipo Unidad" />
+                            <asp:BoundField DataField="nombre_zona" HeaderText="Zona" />
+                            <asp:BoundField DataField="nombre" HeaderText="Chofer" />
+                            <asp:BoundField DataField="tipo" HeaderText="Tipo Unidad" />
                             <asp:BoundField DataField="estado" HeaderText="Estado" />
                             <asp:ButtonField CommandName="eliminar" Text="Eliminar" />
                         </Columns>
@@ -195,27 +196,15 @@
                     <asp:Label ID="lblzona" runat="server" Text="Zona"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;<asp:DropDownList ID="ddlZona" runat="server" 
-                        DataSourceID="SqlDataSource3" DataTextField="zona" DataValueField="codigo">
+                        onselectedindexchanged="ddlZona_SelectedIndexChanged">
                     </asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" 
-                        ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" 
-                        SelectCommand="SELECT [codigo], [zona] FROM [zona]"></asp:SqlDataSource>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                        ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" 
-                        SelectCommand="SELECT [codigo] FROM [zona]"></asp:SqlDataSource>
-                    &nbsp;
-                    <br />
-                    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;<br />
                     <br />
                     <asp:Label ID="lblchofer" runat="server" Text="Chofer"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:DropDownList ID="ddlChofe" runat="server" DataSourceID="SqlDataSource2" 
-                        DataTextField="nombre" DataValueField="codigo">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="ddlChofe" runat="server">
                     </asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
-                        ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" 
-                        SelectCommand="SELECT [codigo], [nombre] FROM [chofer]"></asp:SqlDataSource>
-                </td>
+&nbsp;</td>
                 <td class="style6">
                     &nbsp;</td>
             </tr>
@@ -223,14 +212,11 @@
                 <td class="style5">
                     <asp:Label ID="lbltipounidad" runat="server" Text="Tipo Unidad"></asp:Label>
 &nbsp;&nbsp;
-                    &nbsp;&nbsp;<asp:DropDownList ID="ddlTipoUnidad" runat="server" 
-                        DataSourceID="SqlDataSource4" DataTextField="tipo" DataValueField="codigo">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:DropDownList ID="ddlTipoUnidad" runat="server">
                     </asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" 
-                        ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" 
-                        SelectCommand="SELECT [codigo], [tipo] FROM [tipoUnidades]">
-                    </asp:SqlDataSource>
-&nbsp;</td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;</td>
                 <td class="style6">
                     &nbsp;</td>
             </tr>
@@ -239,7 +225,14 @@
                     <asp:Label ID="lblestado" runat="server" Text="Estado"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="txtestado" runat="server" Width="42px" MaxLength="1">A</asp:TextBox>
-                &nbsp;&nbsp; </td>
+                &nbsp;&nbsp; 
+                    <br />
+                    <br />
+                    <asp:Label ID="lbldisponible" runat="server" Text="Dsisponible"></asp:Label>
+&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="txtdisponible" runat="server" Width="42px" MaxLength="1">D</asp:TextBox>
+                    <br />
+                </td>
                 <td class="style6">
                     &nbsp;</td>
             </tr>

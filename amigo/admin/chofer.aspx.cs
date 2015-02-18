@@ -33,28 +33,35 @@ namespace amigo.admin
             txtestado.Visible = false;
             DropDownList1.Visible = false;
             Label1.Visible = false;
-
-           // lblusuario.Visible = false;
+            lbldisponible.Visible = false;
+            txtdisponible.Visible = false;
+            // lblusuario.Visible = false;
             //txtusuarioid.Visible = false;
             lblmensaje.Visible = false;
             btngrabar.Visible = false;
             btnlimpiar.Visible = false;
             if (!Page.IsPostBack)
             {
-                ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
-                string cadenaConexion = param.ConnectionString;
-                SqlConnection conexion = new SqlConnection(cadenaConexion);
-                string sql = "SELECT * FROM chofer WHERE estado='A'";
-                SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
+                clase_general general = new clase_general();
+                DataSet ds = general.consulta_chofer("G", "", "");
                 grvchofer.DataSource = ds;
                 grvchofer.DataBind();
+
+
+
+                DataSet d1 = general.consulta_usuario();
+                DropDownList1.DataSource = d1.Tables[0].DefaultView;
+                DropDownList1.DataValueField = "UserId";
+                DropDownList1.DataTextField = "UserName";
+                DropDownList1.DataBind();
             }
         }
 
         protected void btnnuevo_Click(object sender, EventArgs e)
         {
+            txtdisponible.Enabled = true;
+            txtdisponible.Visible = true;
+            lbldisponible.Visible = true;
             lblcodigo.Visible = true;
             txtcodigo.Visible = true;
             lbltipolicencia.Visible = true;
@@ -85,7 +92,7 @@ namespace amigo.admin
             txttelefono.Enabled = true;
             txtestado.Enabled = true;
             btngrabar.Enabled = true;
-      
+
             txtestado.Enabled = true;
             // txtusuarioid.Enabled = false;
             btngrabar.Enabled = true;
@@ -99,18 +106,14 @@ namespace amigo.admin
             txttelefono.Text = "";
             txtestado.Text = "";
             txtcodigo.Text = "";
-           // txtusuarioid.Text = "";
-            Session["modo"] = "I";
+            Session["codi"] = 100000;
         }
 
-        protected void btnrefrescar_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("chofer.aspx");
-        }
+
 
         protected void btnlimpiar_Click(object sender, EventArgs e)
         {
-           lblcodigo.Visible = true;
+            lblcodigo.Visible = true;
             txtcodigo.Visible = true;
             lbltipolicencia.Visible = true;
             txttipolicencia.Visible = true;
@@ -131,7 +134,7 @@ namespace amigo.admin
             txtestado.Visible = true;
             DropDownList1.Visible = true;
             Label1.Visible = true;
-           
+
             txtcodigo.Enabled = false;
 
             txtcodigo.Text = "";
@@ -143,22 +146,17 @@ namespace amigo.admin
             txttelefono.Text = "";
             txtestado.Text = "A";
             txtcodigo.Text = "";
-           //txtusuarioid.Text = "";
+            //txtusuarioid.Text = "";
             btngrabar.Visible = true;
             btnlimpiar.Visible = true;
         }
 
         protected void btnbuscar_Click(object sender, EventArgs e)
         {
-            ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
-            string cadena_conexion = param.ConnectionString;
-            SqlConnection conexion = new SqlConnection(cadena_conexion);
-            string sql = "SELECT * FROM chofer WHERE estado='A' AND " + ddllist.SelectedValue + " LIKE '%" + txtbuscar.Text + "%'";
-            SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
-            DataSet ds = new DataSet(); //Ni tiene ningun parametro, guarda los datos.
-            da.Fill(ds);//Ejecutamos la sentencia SELECT y guardamos en ds
-            grvchofer.DataSource = ds; //Cogemos el dato del DataSet
-            grvchofer.DataBind();//refrescamos
+            clase_general general = new clase_general();
+            DataSet ds = general.consulta_chofer("E", ddllist.SelectedValue, txtbuscar.Text);
+            grvchofer.DataSource = ds;
+            grvchofer.DataBind();
         }
 
         protected void grvchofer_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -186,6 +184,8 @@ namespace amigo.admin
             DropDownList1.Visible = true;
             Label1.Visible = false;
             txtcodigo.Enabled = false;
+            txtdisponible.Visible = true;
+            lbldisponible.Visible = true;
 
             int fila = Convert.ToInt32(e.CommandArgument); //Recibe la fila que selecciono en SDtring y la convertimos en Entero
             GridViewRow registro = grvchofer.Rows[fila];//Guarda los datos de la fila en un registro
@@ -198,13 +198,11 @@ namespace amigo.admin
             txthsalida.Text = registro.Cells[6].Text;
             txttelefono.Text = registro.Cells[7].Text;
             txtestado.Text = registro.Cells[8].Text;
-           // txtusuarioid.Text = registro.Cells[9].Text;
+            txtdisponible.Text = registro.Cells[10].Text;
             Session["codigo"] = registro.Cells[1].Text;//Es como una variable global
 
             if (e.CommandName == "modificar")//Pregunta si di a moficcar o a eliminar
             {
-
-
                 txttipolicencia.Enabled = true;
                 txtcedula.Enabled = true;
                 txtnombre.Enabled = true;
@@ -221,14 +219,17 @@ namespace amigo.admin
                 Label1.Visible = true;
                 btngrabar.Enabled = true;
                 btnlimpiar.Enabled = true;
-
+                txtdisponible.Enabled = true;
+                txtdisponible.Visible = true;
                 txtcodigo.Enabled = false;
                 lblmensaje.Text = "";
-                Session["modo"] = "M";
-
+                Session["codi"] = txtcodigo.Text;
             }
             else
             {
+                txtdisponible.Enabled = false;
+                txtdisponible.Visible = true;
+
                 txttipolicencia.Enabled = false;
                 txtcedula.Enabled = false;
                 txtnombre.Enabled = false;
@@ -238,8 +239,8 @@ namespace amigo.admin
                 txtestado.Enabled = false;
                 btngrabar.Enabled = false;
                 txtcodigo.Enabled = false;
-                txtestado.Enabled = false;
-                txtestado.Visible = false;
+                txtestado.Visible = true;
+                txtdisponible.Visible = true;
                 DropDownList1.Visible = false;
                 Label1.Visible = false;
                 btngrabar.Enabled = true;
@@ -247,7 +248,7 @@ namespace amigo.admin
                 //btngrabar.Text = "Eliminar";
                 Session["modo"] = "E";
                 lblmensaje.Text = "Esta seguro que desea eliminar el registro?";
-                
+
             }
 
 
@@ -256,45 +257,17 @@ namespace amigo.admin
 
         protected void btngrabar_Click(object sender, EventArgs e)
         {
+            int numero_registro = 0;
+            clase_general general = new clase_general();
+            numero_registro = general.ins_updatechofer(Convert.ToString(DropDownList1.SelectedValue), Convert.ToInt32(Session["codi"]), txttipolicencia.Text, txtcedula.Text, txtnombre.Text, txthoraEntrada.Text, txthsalida.Text, txttelefono.Text, txtestado.Text, txtdisponible.Text);
+
+            if (Session["modo"] == "E")
             {
-                lblmensaje.Text = "";
-                ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
-                string cadena_conexion = param.ConnectionString;
-                SqlConnection conexion = new SqlConnection(cadena_conexion);
-                string sql = "";
-                if (Session["modo"] == "I")
-                {
-                    sql = "INSERT INTO chofer(tipolicencia, cedula, nombre, horaEntrada, horaSalida, telefono, UserId) VALUES('" + txttipolicencia.Text + "' , '" + txtcedula.Text + "' , '" + txtnombre.Text + "', '" + txthoraEntrada.Text + "',  '" + txthsalida.Text + "','" + txttelefono.Text + "','"+DropDownList1.SelectedValue +"')";
-                }
-                else
-                {
-                    if (Session["modo"] == "M")
-                    {
-                        sql = "UPDATE  chofer SET tipolicencia = '" + txttipolicencia.Text + "' , cedula = '" + txtcedula.Text + "', nombre = '" + txtnombre.Text + "', horaEntrada='" + txthoraEntrada.Text + "', horaSalida='" + txthsalida.Text + "', telefono = '" + txttelefono.Text + "', UserId = '" + DropDownList1.SelectedValue + "'WHERE codigo=" + Session["codigo"];
-
-                    }
-                    else
-                    {//Eliminacion, es una elminacion logica, no fisica. Quiere decir que solo cambio el estado a Innactivo
-                        sql = "UPDATE chofer SET estado = 'I' WHERE codigo = " + Session["codigo"];
-                    }
-
-                }
-                SqlCommand comando = new SqlCommand(sql, conexion);
-                conexion.Open();
-                int numero_registro = comando.ExecuteNonQuery();
-                if (numero_registro == 1)
-                {
-                    lblmensaje.Text = "La Transaccion fue realizada con exito ";
-                }
-                else
-                {
-
-                    lblmensaje.Text = "Ocurrio un error al ejecutar la transaccion ";
-                }
-                conexion.Close();
-              
+                general = new clase_general();
+                numero_registro = general.elimina_chofer(Convert.ToInt32(Session["codigo"]));
 
             }
+            Response.Redirect("chofer.aspx");
         }
 
         protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
@@ -302,8 +275,13 @@ namespace amigo.admin
 
         }
 
+        protected void btnrefrescar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("chofer.aspx");
+        }
 
 
-      
+
+
     }
 }
