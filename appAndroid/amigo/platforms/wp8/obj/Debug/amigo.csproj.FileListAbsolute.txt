@@ -1,0 +1,14 @@
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\wp8\Bin\Debug\ApplicationIcon.png
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\wp8\Bin\Debug\Background.png
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\wp8\Bin\Debug\com.amigo.apphb.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\wp8\Bin\Debug\com.amigo.apphb.pdb
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\wp8\Bin\Debug\AppManifest.xaml
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\wp8\Bin\Debug\Properties\WMAppManifest.xml
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\wp8\Bin\Debug\CordovaAppProj_Debug_AnyCPU.xap
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\wp8\obj\Debug\App.g.cs
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\wp8\obj\Debug\cordovalib\CordovaView.g.cs
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\wp8\obj\Debug\MainPage.g.cs
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\wp8\obj\Debug\com.amigo.apphb.g.resources
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\wp8\obj\Debug\com.amigo.apphb.dll
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\wp8\obj\Debug\com.amigo.apphb.pdb
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\wp8\obj\Debug\XapCacheFile.xml

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.amigo.apphb" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="windows-target-version" value="8.0" />
+    <preference name="windows-phone-target-version" value="8.1" />
+    <name>amigo</name>
+    <description>
+        Servicio de taxi ejecutivo
+    </description>
+    <author email="gstavocevallos@gmail.com" href="http://amigo.apphb.com">
+       WGCV
+    </author>
+    <content src="http://amigo.apphb.com/" />
+    <access origin="*" />
+</widget>

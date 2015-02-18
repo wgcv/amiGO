@@ -1,0 +1,14 @@
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\windows\build\windows80\debug\anycpu\resources.pri
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\windows\build\windows80\debug\anycpu\AppxManifest.xml
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\windows\build\windows80\bld\priconfig.xml
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\windows\build\windows80\bld\priconfig.xml.intermediate
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\windows\build\windows80\bld\layout.resfiles
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\windows\build\windows80\bld\layout.resfiles.intermediate
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\windows\build\windows80\bld\resources.resfiles
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\windows\build\windows80\bld\resources.resfiles.intermediate
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\windows\build\windows80\bld\pri.resfiles
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\windows\build\windows80\bld\pri.resfiles.intermediate
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\windows\build\windows80\bld\qualifiers.txt
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\windows\build\windows80\bld\qualifiers.txt.intermediate
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\windows\build\windows80\bld\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Gustavo\Documents\GitHub\amiGO\appAndroid\amigo\platforms\windows\build\windows80\bld\ProjectArchitectures.txt
