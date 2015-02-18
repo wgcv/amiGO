@@ -1,6 +1,6 @@
 var latitud, longitud;
 function redireccionar() {
-    
+    alert("hola");
     window.location.href  = "/taxista/?latitud="+latitud+"&longitud="+longitud;
 
 
@@ -21,8 +21,8 @@ if (navigator.geolocation) {
     function mostrarLoc(geo) {
         latitud = geo.coords.latitude;
         longitud = geo.coords.longitude;
-alert("hola");
-        setTimeout(redireccionar, 3000);
+
+        setTimeout(redireccionar, 1000);
     }
     
 }
