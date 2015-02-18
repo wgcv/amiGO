@@ -1,6 +1,6 @@
 var latitud, longitud;
 function redireccionar() {
-    window.location = "/taxista/?latitud="+latitud+"&longitud="+longitud;
+    window.location.href  = "/taxista/?latitud="+latitud+"&longitud="+longitud;
 
 
   
