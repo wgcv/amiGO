@@ -39,6 +39,7 @@ namespace amigo
         {
             MembershipUser u;
             u = System.Web.Security.Membership.GetUser();
+
             if (u != null)
             {
                 ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];

@@ -120,7 +120,7 @@
     <Content Include="Scripts\localizacionTaxi.js" />
     <Content Include="Scripts\respon.js" />
     <Content Include="servicios.aspx" />
-    <Content Include="solicitar.aspx" />
+    <Content Include="solicitar\Default.aspx" />
     <Content Include="Styles\jquery.bxslider.css" />
     <Content Include="Styles\normalize.css" />
     <Content Include="Styles\Site.css" />
@@ -323,12 +323,12 @@
     <Compile Include="servicios.aspx.designer.cs">
       <DependentUpon>servicios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="solicitar.aspx.cs">
-      <DependentUpon>solicitar.aspx</DependentUpon>
+    <Compile Include="solicitar\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="solicitar.aspx.designer.cs">
-      <DependentUpon>solicitar.aspx</DependentUpon>
+    <Compile Include="solicitar\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="svrcliente.aspx.cs">
       <DependentUpon>svrcliente.aspx</DependentUpon>

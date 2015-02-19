@@ -51,7 +51,10 @@ function computeTotalDistance(result) {
         total += myroute.legs[i].distance.value;
     }
     total = total / 1000.0;
-    document.getElementById('MainContent_total').innerHTML = total;
+
+    document.getElementById('MainContent_total').value = total;
+    document.getElementById('MainContent_totalh').value = total;
+ 
 }
 //geolocaliza
 if (navigator.geolocation) {

@@ -10,7 +10,33 @@ namespace amigo
 {
     public class clase_general
     {
+        public DataSet asignaUnidad(int zona, int tipounidad, String UserId, int servicio)
+        {
+            ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
+            string cadena_conexion = param.ConnectionString;
+            string nombre_procedimiento = "asignaUnidad";
+            SqlConnection conexion = new SqlConnection(cadena_conexion);
+            SqlDataAdapter adapter = new SqlDataAdapter(nombre_procedimiento, conexion);
+        
+            SqlParameter p_zona = new SqlParameter("@zona", zona);
+            p_zona.Size = 4;
+            SqlParameter p_tipounidad = new SqlParameter("@tipounidad", tipounidad);
 
+            p_tipounidad.Size = 4;
+            SqlParameter p_userId = new SqlParameter("@usuario", UserId);
+            SqlParameter p_servicio = new SqlParameter("@servicio", servicio);
+
+            p_servicio.Size = 4;
+            adapter.SelectCommand.Parameters.Add(p_zona);
+            adapter.SelectCommand.Parameters.Add(p_tipounidad);
+            adapter.SelectCommand.Parameters.Add(p_userId);
+            adapter.SelectCommand.Parameters.Add(p_servicio);
+            adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            return ds;
+
+        }
         public DataSet consulta_zona()
         {
             ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
