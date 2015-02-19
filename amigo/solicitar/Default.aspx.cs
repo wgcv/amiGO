@@ -104,7 +104,16 @@ namespace amigo.solicitar
             u = System.Web.Security.Membership.GetUser();
             
             clase_general general = new clase_general();
-            DataSet ds = general.asignaUnidad(Convert.ToInt32(ddlsectororigen.SelectedValue), Convert.ToInt32(ddltipo.SelectedValue), u.ProviderUserKey.ToString(), Convert.ToInt32(ddltipo.SelectedValue));
+            if (RadioButtonList1.SelectedValue == "S")
+            {
+                String km = totalh.Value;
+                km = km.Replace('.', ',');
+                int i = general.ins_updatecarreras(1000, u.ProviderUserKey.ToString(), (Convert.ToDecimal(km)), txtdireccionorigen.Text, Convert.ToInt32(ddlsectororigen.SelectedValue), Convert.ToInt32(ddlciudadelaorigen.SelectedValue), txtdirecciondestino.Text, Convert.ToInt32(ddlsectordestino.SelectedValue), Convert.ToInt32(ddlsectordestino.SelectedValue), 1,txtfecha.Text+" " + txthora.Text  ,1, Convert.ToInt32(ddlservicio.SelectedValue), Convert.ToInt32(ddltipo.SelectedValue), "Z", "A", "e50abe78-75c2-449f-a816-42b77dcf98a7");
+
+            }
+            else
+            {
+            DataSet ds = general.asignaUnidad(Convert.ToInt32(ddlsectororigen.SelectedValue), Convert.ToInt32(ddltipo.SelectedValue), u.ProviderUserKey.ToString(), Convert.ToInt32(ddlservicio.SelectedValue));
             if (ds.Tables[0].Rows.Count < 1)
             {
                 lblError.Visible = true;
@@ -122,18 +131,40 @@ namespace amigo.solicitar
                  String valorServicio = ds.Tables[0].Rows[0]["valor"].ToString();
                  String km = totalh.Value;
                  km = km.Replace('.', ',');
-
+                 String codigo = ds.Tables[0].Rows[0]["codigo"].ToString();
 
                  Decimal valor = Convert.ToDecimal(valorServicio) + (Convert.ToDecimal(km) * Convert.ToDecimal(carrValorKm));
+                 int i = general.ins_updatecarreras(1000, u.ProviderUserKey.ToString(), (Convert.ToDecimal(km)), txtdireccionorigen.Text, Convert.ToInt32(ddlsectororigen.SelectedValue), Convert.ToInt32(ddlciudadelaorigen.SelectedValue), txtdirecciondestino.Text, Convert.ToInt32(ddlsectordestino.SelectedValue), Convert.ToInt32(ddlsectordestino.SelectedValue), valor, "", Convert.ToInt32(codigo), Convert.ToInt32(ddlservicio.SelectedValue), Convert.ToInt32(ddltipo.SelectedValue), "A", "A", choferUI);
 
+      
                  Response.Write("<script type='text/javascript'>window.open('http://104.236.230.65/index.php?numero=593" + celular + "&mensaje=La unidad modelo: " + carroModelo + " Marca: " + carroMarca + " Placas: " + carroPlaca + ". El sr " + choferNombre + " llegara en unos minutos','cal','width=0,height=0,left=0,top=0');</script>");
                  Response.Write("<script type='text/javascript'>window.location.href  = '/solicitar/desunidad.aspx?chofer=" + choferNombre + "&telefono=" + chofertelefono + "&modelo=" + carroModelo + "&marca=" + carroMarca + "&placa=" + carroPlaca + "';</script>");
+
                 
-                
-                //Response.Redirect("/despacho.aspx?chofer=" + choferNombre + "&telefono=" + chofertelefono + "&modelo=" + carroModelo + "&marca=" + carroMarca+ "&placa=" + carroPlaca);
-           
+        }
             
             }
         }
-    }
+
+        protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (RadioButtonList1.SelectedValue == "S")
+            {
+                lblfecha.Visible = true;
+                txtfecha.Visible = true;
+                lblhora.Visible = true;
+                txthora.Visible = true;
+
+            }
+            else
+            {
+                lblfecha.Visible = false;
+                txtfecha.Visible = false;
+                lblhora.Visible = false;
+                txthora.Visible = false;
+            }
+        }
+
+     
+ }
 }

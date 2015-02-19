@@ -665,5 +665,10 @@ namespace amigo
             conexion.Close();
             return numero_registro;
         }
+
+
+
+
+
     }
 }

@@ -62,7 +62,7 @@
 		        <a href="/nosotros.aspx"><li>Nosotros</li></a>
 		        <a href="/servicios.aspx"><li>Servicios</li></a>
 		        <a href="/unidades.aspx"><li>Unidades</li></a>
-		        <a href="/svrcliente.aspx"><li>Servicio al cliente</li></a>
+		   
 		       <a href="/contactanos.aspx"> <li>Contactos</li></a>
                 <a href="/solicitar"><li id="solicitar">Solicitar</li></a>
 	        </ul>

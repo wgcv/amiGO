@@ -64,9 +64,10 @@
 
             </td>
             <td>
-                <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True">
-                    <asp:ListItem Value="S">Si</asp:ListItem>
+                <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" 
+                    onselectedindexchanged="RadioButtonList1_SelectedIndexChanged">
                     <asp:ListItem Selected="True" Value="N">No</asp:ListItem>
+                    <asp:ListItem Value="S">Si</asp:ListItem>
                 </asp:RadioButtonList>
             </td>
             <td>
@@ -210,7 +211,7 @@
             <td>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnsolictar" runat="server" Text="Solicitar Unidad" 
-                    onclick="btnsolictar_Click" />
+                    onclick="btnsolictar_Click" style="height: 26px" />
 &nbsp;&nbsp; &nbsp;</td>
             <td>
                 &nbsp;</td>
