@@ -67,6 +67,7 @@
     <Content Include="admin\contactanos.aspx" />
     <Content Include="admin\default.aspx" />
     <Content Include="admin\Estadisticas.aspx" />
+    <Content Include="admin\registroCarrera.aspx" />
     <Content Include="admin\servicios.aspx" />
     <Content Include="admin\TipoUnidades.aspx" />
     <Content Include="admin\unidad.aspx" />
@@ -232,6 +233,13 @@
     </Compile>
     <Compile Include="admin\Estadisticas.aspx.designer.cs">
       <DependentUpon>Estadisticas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\registroCarrera.aspx.cs">
+      <DependentUpon>registroCarrera.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\registroCarrera.aspx.designer.cs">
+      <DependentUpon>registroCarrera.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\servicios.aspx.cs">
       <DependentUpon>servicios.aspx</DependentUpon>

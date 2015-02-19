@@ -521,5 +521,96 @@ namespace amigo
             conexion.Close();
             return numero_registro;
         }
+        public DataSet consulta_carreras()
+        {
+            string nombre_procedimiento = "";
+            ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
+            string cadena_conexion = param.ConnectionString;
+            //if (tipo_consulta == "G")
+            // {
+
+            nombre_procedimiento = "general_carreras";
+            SqlConnection conexion = new SqlConnection(cadena_conexion);
+            SqlDataAdapter da = new SqlDataAdapter(nombre_procedimiento, conexion);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            return ds;
+            // }
+            /*else
+            {
+                nombre_procedimiento = "especifica_unidades";
+                SqlConnection conexion = new SqlConnection(cadena_conexion);
+                SqlDataAdapter adapter = new SqlDataAdapter(nombre_procedimiento, conexion);
+
+                adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter p_band = new SqlParameter("@band", tipo);
+                p_band.Size = 20;
+                SqlParameter p_tipo = new SqlParameter("@tipo", valor);
+                p_tipo.Size = 50;
+
+                adapter.SelectCommand.Parameters.Add(p_band);
+                adapter.SelectCommand.Parameters.Add(p_tipo);
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                return ds;
+            }*/
+        }
+        public int ins_updatecarreras(int id, string UserId, decimal km, string direccion, int zona, decimal valorAprox, string fecha, int unidad, int servicio, int tipoUnidad, string activa, string estado, string ChoferId)
+        {
+            ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
+            string cadena_conexion = param.ConnectionString;
+            SqlConnection conexion = new SqlConnection(cadena_conexion);
+            conexion.Open();
+            string nombre_procedimiento = "sp_registroCarrera_ins_upd";
+            SqlCommand comando = new SqlCommand(nombre_procedimiento, conexion);
+            comando.CommandType = CommandType.StoredProcedure;
+            SqlParameter p_id = new SqlParameter("@id", id);
+            p_id.Size = 4;
+            SqlParameter p_UserId = new SqlParameter("@UserId", UserId);
+            SqlParameter p_km = new SqlParameter("@km", km);
+            p_km.Size = 8;
+            SqlParameter p_direccion = new SqlParameter("@direccion", direccion);
+            p_direccion.Size = 8;
+            SqlParameter p_zona = new SqlParameter("@zona ", zona);
+            p_zona.Size = 150;
+            SqlParameter p_valorAprox = new SqlParameter("@valorAprox ", valorAprox);
+            p_valorAprox.Size = 150;
+            SqlParameter p_fecha = new SqlParameter("@fecha ", fecha);
+            p_fecha.Size = 150;
+            SqlParameter p_unidad = new SqlParameter("@unidad", unidad);
+            p_unidad.Size = 4;
+            SqlParameter p_servicio = new SqlParameter("@servicio", servicio);
+            p_servicio.Size = 4;
+            SqlParameter p_tipoUnidad = new SqlParameter("@tipoUnidad", tipoUnidad);
+            p_tipoUnidad.Size = 4;
+            SqlParameter p_activa = new SqlParameter("@activa", activa);
+            p_activa.Size = 4;
+            SqlParameter p_estado = new SqlParameter("@estado", estado);
+            p_estado.Size = 1;
+            SqlParameter p_ChoferId = new SqlParameter("@ChoferId", ChoferId);
+
+
+            comando.Parameters.Add(p_id);
+            comando.Parameters.Add(p_UserId);
+            comando.Parameters.Add(p_km);
+            comando.Parameters.Add(p_direccion);
+            comando.Parameters.Add(p_zona);
+            comando.Parameters.Add(p_valorAprox);
+            comando.Parameters.Add(p_fecha);
+            comando.Parameters.Add(p_unidad);
+            comando.Parameters.Add(p_servicio);
+            comando.Parameters.Add(p_tipoUnidad);
+            comando.Parameters.Add(p_activa);
+            comando.Parameters.Add(p_estado);
+            comando.Parameters.Add(p_ChoferId);
+
+            int numero_registro = comando.ExecuteNonQuery();
+            conexion.Close();
+            return numero_registro;
+
+        }
+       
     }
 }
