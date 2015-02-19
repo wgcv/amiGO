@@ -10,7 +10,6 @@ C:\Users\Nadia Terranova\Downloads\amiGO-master\amiGO-master\amigo\bin\amigo.dll
 C:\Users\Nadia Terranova\Downloads\amiGO-master\amiGO-master\amigo\bin\amigo.pdb
 C:\Users\Nadia Terranova\Downloads\amiGO-master\amiGO-master\amigo\obj\Debug\amigo.dll
 C:\Users\Nadia Terranova\Downloads\amiGO-master\amiGO-master\amigo\obj\Debug\amigo.pdb
-C:\Users\Gustavo\Documents\GitHub\amiGO\amigo\obj\Debug\amigo.csprojResolveAssemblyReference.cache
 C:\Users\Nadia Terranova\Documents\GitHub\amiGO\amigo\bin\amigo.dll
 C:\Users\Nadia Terranova\Documents\GitHub\amiGO\amigo\bin\amigo.pdb
 C:\Users\Nadia Terranova\Documents\GitHub\amiGO\amigo\obj\Debug\amigo.csprojResolveAssemblyReference.cache

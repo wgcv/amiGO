@@ -547,25 +547,25 @@ namespace amigo
             conexion.Close();
             return numero_registro;
         }
-        public DataSet consulta_carreras()
+        public DataSet consulta_carreras(string tipo_consulta, string tipo, string valor)
         {
             string nombre_procedimiento = "";
             ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
             string cadena_conexion = param.ConnectionString;
-            //if (tipo_consulta == "G")
-            // {
-
-            nombre_procedimiento = "general_carreras";
-            SqlConnection conexion = new SqlConnection(cadena_conexion);
-            SqlDataAdapter da = new SqlDataAdapter(nombre_procedimiento, conexion);
-            da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            return ds;
-            // }
-            /*else
+            if (tipo_consulta == "G")
             {
-                nombre_procedimiento = "especifica_unidades";
+
+                nombre_procedimiento = "general_carreras";
+                SqlConnection conexion = new SqlConnection(cadena_conexion);
+                SqlDataAdapter da = new SqlDataAdapter(nombre_procedimiento, conexion);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+            else
+            {
+                nombre_procedimiento = "especifica_carrera";
                 SqlConnection conexion = new SqlConnection(cadena_conexion);
                 SqlDataAdapter adapter = new SqlDataAdapter(nombre_procedimiento, conexion);
 
@@ -581,9 +581,9 @@ namespace amigo
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 return ds;
-            }*/
+            }
         }
-        public int ins_updatecarreras(int id, string UserId, decimal km, string direccion, int zona, decimal valorAprox, string fecha, int unidad, int servicio, int tipoUnidad, string activa, string estado, string ChoferId)
+        public int ins_updatecarreras(int id, string UserId, decimal km, string direccion, int zona, int ciudadelaorigen, string direccionllegada, int zonallegada, int ciudadelallegada, decimal valorAprox, string fecha, int unidad, int servicio, int tipoUnidad, string activa, string estado, string ChoferId)
         {
             ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
             string cadena_conexion = param.ConnectionString;
@@ -600,7 +600,15 @@ namespace amigo
             SqlParameter p_direccion = new SqlParameter("@direccion", direccion);
             p_direccion.Size = 8;
             SqlParameter p_zona = new SqlParameter("@zona ", zona);
-            p_zona.Size = 150;
+            p_zona.Size = 4;
+            SqlParameter p_ciudadelaorigen = new SqlParameter("@ciudadelaorigen", ciudadelaorigen);
+            p_ciudadelaorigen.Size = 4;
+            SqlParameter p_direccionllegada = new SqlParameter("@direccionllegada", direccionllegada);
+            p_direccionllegada.Size = 150;
+            SqlParameter p_zonallegada = new SqlParameter("@zonallegada", zonallegada);
+            p_zonallegada.Size = 4;
+            SqlParameter p_ciudadelallegada = new SqlParameter("@ciudadelallegada", ciudadelallegada);
+            p_ciudadelallegada.Size = 4;
             SqlParameter p_valorAprox = new SqlParameter("@valorAprox ", valorAprox);
             p_valorAprox.Size = 150;
             SqlParameter p_fecha = new SqlParameter("@fecha ", fecha);
@@ -623,6 +631,10 @@ namespace amigo
             comando.Parameters.Add(p_km);
             comando.Parameters.Add(p_direccion);
             comando.Parameters.Add(p_zona);
+            comando.Parameters.Add(p_ciudadelaorigen);
+            comando.Parameters.Add(p_direccionllegada);
+            comando.Parameters.Add(p_zonallegada);
+            comando.Parameters.Add(p_ciudadelallegada);
             comando.Parameters.Add(p_valorAprox);
             comando.Parameters.Add(p_fecha);
             comando.Parameters.Add(p_unidad);
@@ -637,6 +649,21 @@ namespace amigo
             return numero_registro;
 
         }
-       
+        public int elimina_carrera(int id)
+        {
+            ConnectionStringSettings param = ConfigurationManager.ConnectionStrings["ApplicationServices"];
+            string cadena_conexion = param.ConnectionString;
+            SqlConnection conexion = new SqlConnection(cadena_conexion);
+            conexion.Open();
+            string nombre_procedimiento = "elimina_registrocarrera";
+            SqlCommand comando = new SqlCommand(nombre_procedimiento, conexion);
+            comando.CommandType = CommandType.StoredProcedure;
+            SqlParameter p_codigo = new SqlParameter("@id", id);
+            p_codigo.Size = 4;
+            comando.Parameters.Add(p_codigo);
+            int numero_registro = comando.ExecuteNonQuery();
+            conexion.Close();
+            return numero_registro;
+        }
     }
 }

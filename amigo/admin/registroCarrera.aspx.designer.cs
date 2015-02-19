@@ -8,10 +8,11 @@
 //------------------------------------------------------------------------------
 
 namespace amigo.admin {
-    
-    
-    public partial class registroCarrera {
-        
+
+
+    public partial class registroCarrera
+    {
+
         /// <summary>
         /// Control lblbuscar.
         /// </summary>
@@ -20,7 +21,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblbuscar;
-        
+
         /// <summary>
         /// Control ddlbuscar.
         /// </summary>
@@ -29,16 +30,16 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlbuscar;
-        
+
         /// <summary>
-        /// Control TextBox2.
+        /// Control txtbuscar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
-        
+        protected global::System.Web.UI.WebControls.TextBox txtbuscar;
+
         /// <summary>
         /// Control Bbuscar.
         /// </summary>
@@ -47,7 +48,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Bbuscar;
-        
+
         /// <summary>
         /// Control gvrcarreras.
         /// </summary>
@@ -56,7 +57,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvrcarreras;
-        
+
         /// <summary>
         /// Control Bnuevo.
         /// </summary>
@@ -65,7 +66,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Bnuevo;
-        
+
         /// <summary>
         /// Control Brefrescar.
         /// </summary>
@@ -74,7 +75,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Brefrescar;
-        
+
         /// <summary>
         /// Control lblcodigo.
         /// </summary>
@@ -83,7 +84,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblcodigo;
-        
+
         /// <summary>
         /// Control txtcodigo.
         /// </summary>
@@ -92,7 +93,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtcodigo;
-        
+
         /// <summary>
         /// Control lblnombre.
         /// </summary>
@@ -101,7 +102,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblnombre;
-        
+
         /// <summary>
         /// Control ddlnombre.
         /// </summary>
@@ -110,7 +111,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlnombre;
-        
+
         /// <summary>
         /// Control lbldistancia.
         /// </summary>
@@ -119,7 +120,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbldistancia;
-        
+
         /// <summary>
         /// Control txtdistancia.
         /// </summary>
@@ -128,7 +129,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdistancia;
-        
+
         /// <summary>
         /// Control lbldireccion.
         /// </summary>
@@ -137,7 +138,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbldireccion;
-        
+
         /// <summary>
         /// Control txtdireccion.
         /// </summary>
@@ -146,7 +147,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdireccion;
-        
+
         /// <summary>
         /// Control lblzona.
         /// </summary>
@@ -155,7 +156,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblzona;
-        
+
         /// <summary>
         /// Control ddlzona.
         /// </summary>
@@ -164,7 +165,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlzona;
-        
+
         /// <summary>
         /// Control lblciudadela.
         /// </summary>
@@ -173,7 +174,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblciudadela;
-        
+
         /// <summary>
         /// Control ddlciudadela.
         /// </summary>
@@ -182,7 +183,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlciudadela;
-        
+
         /// <summary>
         /// Control lbldestino.
         /// </summary>
@@ -191,7 +192,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbldestino;
-        
+
         /// <summary>
         /// Control lblzona1.
         /// </summary>
@@ -200,7 +201,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblzona1;
-        
+
         /// <summary>
         /// Control ddlzonallegada.
         /// </summary>
@@ -209,7 +210,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlzonallegada;
-        
+
         /// <summary>
         /// Control lblciudadelallegada.
         /// </summary>
@@ -218,7 +219,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblciudadelallegada;
-        
+
         /// <summary>
         /// Control ddlciudadelallegada.
         /// </summary>
@@ -227,7 +228,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlciudadelallegada;
-        
+
         /// <summary>
         /// Control lbldireccionllegada.
         /// </summary>
@@ -236,7 +237,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbldireccionllegada;
-        
+
         /// <summary>
         /// Control txtdireccionllegada.
         /// </summary>
@@ -245,7 +246,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdireccionllegada;
-        
+
         /// <summary>
         /// Control lblvalor.
         /// </summary>
@@ -254,7 +255,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblvalor;
-        
+
         /// <summary>
         /// Control txtvalor.
         /// </summary>
@@ -263,7 +264,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtvalor;
-        
+
         /// <summary>
         /// Control lblfecha.
         /// </summary>
@@ -272,7 +273,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblfecha;
-        
+
         /// <summary>
         /// Control txtfecha.
         /// </summary>
@@ -281,7 +282,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtfecha;
-        
+
         /// <summary>
         /// Control lblunidad.
         /// </summary>
@@ -290,7 +291,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblunidad;
-        
+
         /// <summary>
         /// Control ddlunidad.
         /// </summary>
@@ -299,7 +300,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlunidad;
-        
+
         /// <summary>
         /// Control lblservicio.
         /// </summary>
@@ -308,7 +309,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblservicio;
-        
+
         /// <summary>
         /// Control ddlservicio.
         /// </summary>
@@ -317,7 +318,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlservicio;
-        
+
         /// <summary>
         /// Control lbltipoUnidad.
         /// </summary>
@@ -326,7 +327,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbltipoUnidad;
-        
+
         /// <summary>
         /// Control ddltipoUnidad.
         /// </summary>
@@ -335,7 +336,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddltipoUnidad;
-        
+
         /// <summary>
         /// Control lblestadocarrera.
         /// </summary>
@@ -344,7 +345,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblestadocarrera;
-        
+
         /// <summary>
         /// Control txtestadocarrera.
         /// </summary>
@@ -353,16 +354,16 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtestadocarrera;
-        
+
         /// <summary>
-        /// Control lblestadocarrera0.
+        /// Control lblestado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblestadocarrera0;
-        
+        protected global::System.Web.UI.WebControls.Label lblestado;
+
         /// <summary>
         /// Control txtestado.
         /// </summary>
@@ -371,7 +372,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtestado;
-        
+
         /// <summary>
         /// Control lblchfofer.
         /// </summary>
@@ -380,7 +381,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblchfofer;
-        
+
         /// <summary>
         /// Control ddlchofer.
         /// </summary>
@@ -389,7 +390,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlchofer;
-        
+
         /// <summary>
         /// Control lblmensaje.
         /// </summary>
@@ -398,7 +399,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblmensaje;
-        
+
         /// <summary>
         /// Control Bgrabar.
         /// </summary>
@@ -407,7 +408,7 @@ namespace amigo.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Bgrabar;
-        
+
         /// <summary>
         /// Control Blimpiar.
         /// </summary>

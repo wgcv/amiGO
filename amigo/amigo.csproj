@@ -379,8 +379,10 @@
     <Content Include="admin\admin.Master" />
     <Content Include="admin\web.config" />
     <None Include="logos\Thumbs.db" />
+    <Content Include="solicitar\web.config" />
     <None Include="Styles\stl.styl" />
     <Content Include="taxista\serviciotaxi.Master" />
+    <Content Include="taxista\web.config" />
     <None Include="wgcv\ubicacion taxist\ubicacion.json" />
   </ItemGroup>
   <ItemGroup>

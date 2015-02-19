@@ -4,8 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Configuration;
-using System.Data.SqlClient;
 using System.Data;
 
 namespace amigo.admin
@@ -49,11 +47,14 @@ namespace amigo.admin
             Bgrabar.Visible = false;
             Blimpiar.Visible = false;
             lbldireccionllegada.Visible = false;
+            lblestado.Visible = false;
+            txtestado.Visible = false;
+
 
             if (!Page.IsPostBack)
             {
                 clase_general general = new clase_general();
-                DataSet ds = general.consulta_carreras();
+                DataSet ds = general.consulta_carreras("G", "", "");
                 gvrcarreras.DataSource = ds;
                 gvrcarreras.DataBind();
 
@@ -86,7 +87,7 @@ namespace amigo.admin
                 ddlservicio.DataValueField = "codigo";
                 ddlservicio.DataTextField = "nombre_servicio";
                 ddlservicio.DataBind();
-                
+
 
                 DataSet d5 = general.consulta_unidades("G", "", "");
                 ddlunidad.DataSource = d5.Tables[0].DefaultView;
@@ -99,8 +100,8 @@ namespace amigo.admin
                 ddlnombre.DataValueField = "UserId";
                 ddlnombre.DataTextField = "UserName";
                 ddlnombre.DataBind();
-               
-                DataSet d7 = general.consulta_ciudadela( Convert.ToInt32(ddlzona.SelectedValue));
+
+                DataSet d7 = general.consulta_ciudadela(Convert.ToInt32(ddlzona.SelectedValue));
                 ddlciudadela.DataSource = d7.Tables[0].DefaultView;
                 ddlciudadela.DataValueField = "codigo";
                 ddlciudadela.DataTextField = "ciudadela";
@@ -126,10 +127,7 @@ namespace amigo.admin
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         protected void TextBox3_TextChanged(object sender, EventArgs e)
         {
@@ -192,7 +190,8 @@ namespace amigo.admin
             lblciudadela.Visible = true;
             ddlciudadela.Visible = true;
             lbldireccionllegada.Visible = true;
-
+            lblestado.Visible = true;
+            txtestado.Visible = true;
 
             Session["codi"] = 100000;
 
@@ -245,6 +244,9 @@ namespace amigo.admin
             ddlciudadelallegada.Visible = true;
             lblciudadelallegada.Visible = true;
             lblzona1.Visible = true;
+            lblestado.Visible = true;
+            txtestado.Visible = true;
+            txtestado.Text = "";
         }
 
         protected void gvrcarreras_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -287,6 +289,8 @@ namespace amigo.admin
             ddlciudadelallegada.Visible = true;
             lblciudadelallegada.Visible = true;
             lblzona1.Visible = true;
+            lblestado.Visible = true;
+            txtestado.Visible = true;
 
             int fila = Convert.ToInt32(e.CommandArgument); //Recibe la fila que selecciono en SDtring y la convertimos en Entero
             GridViewRow registro = gvrcarreras.Rows[fila];//Guarda los datos de la fila en un registro
@@ -296,13 +300,18 @@ namespace amigo.admin
             txtdistancia.Text = registro.Cells[3].Text;
             txtdireccion.Text = registro.Cells[4].Text;
             ddlzona.SelectedItem.Text = registro.Cells[5].Text;//Cells nos ayuda a  recuperar el texto de cada celda
-            txtvalor.Text = registro.Cells[6].Text;
-            txtfecha.Text = registro.Cells[7].Text;
-            ddlunidad.SelectedItem.Text = registro.Cells[8].Text;
-            ddlservicio.SelectedItem.Text = registro.Cells[9].Text;
-            ddltipoUnidad.SelectedItem.Text = registro.Cells[10].Text;
-            txtestadocarrera.Text = registro.Cells[11].Text;
-            ddlchofer.SelectedItem.Text = registro.Cells[12].Text;
+            ddlciudadela.SelectedItem.Text = registro.Cells[6].Text;
+            txtdireccionllegada.Text = registro.Cells[7].Text;
+            ddlzonallegada.SelectedItem.Text = registro.Cells[8].Text;
+            ddlciudadelallegada.SelectedItem.Text = registro.Cells[9].Text;
+            txtvalor.Text = registro.Cells[10].Text;
+            txtfecha.Text = registro.Cells[11].Text;
+            ddlunidad.SelectedItem.Text = registro.Cells[12].Text;
+            ddlservicio.SelectedItem.Text = registro.Cells[13].Text;
+            ddltipoUnidad.SelectedItem.Text = registro.Cells[14].Text;
+            txtestadocarrera.Text = registro.Cells[15].Text;
+            ddlchofer.SelectedItem.Text = registro.Cells[16].Text;
+
 
 
 
@@ -310,7 +319,7 @@ namespace amigo.admin
 
             Session["codigo"] = registro.Cells[1].Text;//Es como una variable global
             if (e.CommandName == "modificar")//Pregunta si di a moficcar o a eliminar
-            {  
+            {
                 txtdireccionllegada.Visible = true;
                 ddlzonallegada.Visible = true;
                 ddlciudadelallegada.Visible = true;
@@ -369,7 +378,8 @@ namespace amigo.admin
                 ddltipoUnidad.Enabled = true;
                 ddlunidad.Enabled = true;
                 ddlzona.Enabled = true;
-
+                lblestado.Visible = true;
+                txtestado.Visible = true;
 
 
                 lblmensaje.Text = "";
@@ -446,6 +456,9 @@ namespace amigo.admin
                 ddltipoUnidad.Enabled = false;
                 ddlunidad.Enabled = false;
                 ddlzona.Enabled = false;
+                lblestado.Visible = true;
+                txtestado.Visible = true;
+                txtestado.Enabled = false;
                 Session["modo"] = "E";
                 lblmensaje.Text = "Esta seguro que desea eliminar el registro?";
 
@@ -457,10 +470,22 @@ namespace amigo.admin
         {
 
             int numero_registro = 0;
+            if (Session["modo"] == "E")
+            {
+                clase_general general = new clase_general();
+                general = new clase_general();
+                numero_registro = general.elimina_carrera(Convert.ToInt32(Session["codigo"]));
 
-            clase_general general = new clase_general();
-            numero_registro = general.ins_updatecarreras(Convert.ToInt32(Session["codi"]), ddlnombre.SelectedValue, Convert.ToDecimal(txtdistancia.Text), txtdireccion.Text, Convert.ToInt32(ddlzona.SelectedValue), Convert.ToDecimal(txtvalor.Text), txtfecha.Text, Convert.ToInt32(ddlunidad.SelectedValue), Convert.ToInt32(ddlservicio.SelectedValue), Convert.ToInt32(ddltipoUnidad.SelectedValue), txtestadocarrera.Text, txtestado.Text, ddlchofer.SelectedValue);
+            }
+            else
+            {
 
+                clase_general general = new clase_general();
+                numero_registro = general.ins_updatecarreras(Convert.ToInt32(Session["codi"]), ddlnombre.SelectedValue, Convert.ToDecimal(txtdistancia.Text), txtdireccion.Text, Convert.ToInt32(ddlzona.SelectedValue), Convert.ToInt32(ddlciudadela.SelectedValue), txtdireccionllegada.Text, Convert.ToInt32(ddlzonallegada.SelectedValue), Convert.ToInt32(ddlciudadelallegada.SelectedValue), Convert.ToDecimal(txtvalor.Text), txtfecha.Text, Convert.ToInt32(ddlunidad.SelectedValue), Convert.ToInt32(ddlservicio.SelectedValue), Convert.ToInt32(ddltipoUnidad.SelectedValue), txtestadocarrera.Text, txtestado.Text, ddlchofer.SelectedValue);
+
+
+            }
+            Response.Redirect("registroCarrera.aspx");
         }
 
         protected void ddlzona_SelectedIndexChanged(object sender, EventArgs e)
@@ -570,6 +595,22 @@ namespace amigo.admin
             ddlciudadelallegada.DataValueField = "codigo";
             ddlciudadelallegada.DataTextField = "ciudadela";
             ddlciudadelallegada.DataBind();
+        }
+
+        protected void Brefrescar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("registroCarrera.aspx");
+        }
+
+        protected void Bbuscar_Click(object sender, EventArgs e)
+        {
+
+            clase_general general = new clase_general();
+            DataSet ds = general.consulta_carreras("E", ddlbuscar.SelectedValue, txtbuscar.Text);
+            gvrcarreras.DataSource = ds;
+            gvrcarreras.DataBind();
+
+
         }
     }
 }

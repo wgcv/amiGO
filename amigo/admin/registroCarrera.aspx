@@ -13,11 +13,14 @@
         <asp:Label ID="lblbuscar" runat="server" Text="Buscar por: "></asp:Label>
 &nbsp;&nbsp;
         <asp:DropDownList ID="ddlbuscar" runat="server">
+            <asp:ListItem Value="id">Codigo</asp:ListItem>
+            <asp:ListItem Value="activa">Activa</asp:ListItem>
+            <asp:ListItem Value="valorAprox">Costo</asp:ListItem>
         </asp:DropDownList>
 &nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox2" runat="server" Width="180px"></asp:TextBox>
+        <asp:TextBox ID="txtbuscar" runat="server" Width="180px"></asp:TextBox>
 &nbsp;&nbsp;
-        <asp:Button ID="Bbuscar" runat="server" onclick="Button1_Click" Text="Buscar" 
+        <asp:Button ID="Bbuscar" runat="server" onclick="Bbuscar_Click" Text="Buscar" 
             Width="90px" />
     </p>
     <asp:GridView ID="gvrcarreras" runat="server" 
@@ -33,8 +36,8 @@
             <asp:BoundField DataField="nombre_zona" HeaderText="Zona O" />
             <asp:BoundField DataField="ciudadela" HeaderText="Ciudadela O." />
             <asp:BoundField DataField="direccionllegada" HeaderText="Direccion D." />
-            <asp:BoundField DataField="nombre_zona" HeaderText="Zona D" />
-            <asp:BoundField DataField="ciudadela" HeaderText="Ciudadela D" />
+            <asp:BoundField DataField="zonallegada" HeaderText="Zona D" />
+            <asp:BoundField DataField="ciudadelallegada" HeaderText="Ciudadela D" />
             <asp:BoundField DataField="valorAprox" HeaderText="Valor" />
             <asp:BoundField DataField="fecha" HeaderText="Fecha" />
             <asp:BoundField DataField="modelo" HeaderText="Unidad" />
@@ -54,7 +57,7 @@
             Width="115px" onclick="Bnuevo_Click" />
     &nbsp;&nbsp;
         <asp:Button ID="Brefrescar" runat="server" Text="Refrescar" Height="35px" 
-            Width="115px" />
+            Width="115px" onclick="Brefrescar_Click" />
     </p>
     <p>
         &nbsp;</p>
@@ -154,7 +157,7 @@
             Width="53px"></asp:TextBox>
     </p>
     <p>
-        &nbsp; <asp:Label ID="lblestadocarrera0" runat="server" Text="Estado "></asp:Label>
+        &nbsp; <asp:Label ID="lblestado" runat="server" Text="Estado "></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="txtestado" runat="server" ontextchanged="txtfecha_TextChanged" 
             Width="53px"></asp:TextBox>
@@ -181,4 +184,5 @@
     </p>
     <p>
     </p>
+
 </asp:Content>
