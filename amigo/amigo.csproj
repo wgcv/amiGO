@@ -121,6 +121,7 @@
     <Content Include="Scripts\respon.js" />
     <Content Include="servicios.aspx" />
     <Content Include="solicitar\Default.aspx" />
+    <Content Include="solicitar\desunidad.aspx" />
     <Content Include="Styles\jquery.bxslider.css" />
     <Content Include="Styles\normalize.css" />
     <Content Include="Styles\Site.css" />
@@ -329,6 +330,13 @@
     </Compile>
     <Compile Include="solicitar\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="solicitar\desunidad.aspx.cs">
+      <DependentUpon>desunidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="solicitar\desunidad.aspx.designer.cs">
+      <DependentUpon>desunidad.aspx</DependentUpon>
     </Compile>
     <Compile Include="svrcliente.aspx.cs">
       <DependentUpon>svrcliente.aspx</DependentUpon>

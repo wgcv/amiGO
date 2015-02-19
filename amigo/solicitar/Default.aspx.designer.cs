@@ -7,7 +7,8 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace amigo {
+namespace amigo.solicitar
+{
     
     
     public partial class solicitar {

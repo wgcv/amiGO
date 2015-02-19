@@ -10,7 +10,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Web.Security;
 
-namespace amigo
+namespace amigo.solicitar
 {
     public partial class solicitar : System.Web.UI.Page
     {
@@ -127,7 +127,7 @@ namespace amigo
                  Decimal valor = Convert.ToDecimal(valorServicio) + (Convert.ToDecimal(km) * Convert.ToDecimal(carrValorKm));
 
                  Response.Write("<script type='text/javascript'>window.open('http://104.236.230.65/index.php?numero=593" + celular + "&mensaje=La unidad modelo: " + carroModelo + " Marca: " + carroMarca + " Placas: " + carroPlaca + ". El sr " + choferNombre + " llegara en unos minutos','cal','width=0,height=0,left=0,top=0');</script>");
-                 Response.Write("<script type='text/javascript'>window.location.href  = '/despacho.aspx?chofer=" + choferNombre + "&telefono=" + chofertelefono + "&modelo=" + carroModelo + "&marca=" + carroMarca+ "&placa=" + carroPlaca+"';</script>");
+                 Response.Write("<script type='text/javascript'>window.location.href  = '/solicitar/desunidad.aspx?chofer=" + choferNombre + "&telefono=" + chofertelefono + "&modelo=" + carroModelo + "&marca=" + carroMarca + "&placa=" + carroPlaca + "';</script>");
                 
                 
                 //Response.Redirect("/despacho.aspx?chofer=" + choferNombre + "&telefono=" + chofertelefono + "&modelo=" + carroModelo + "&marca=" + carroMarca+ "&placa=" + carroPlaca);
